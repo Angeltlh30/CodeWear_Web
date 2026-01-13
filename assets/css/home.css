@@ -202,38 +202,6 @@ nav li a.active {
 }
 
 /* Sản phẩm nổi bật */
-/* 
-
-.product-card {
-  background-color: #4b5563;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-}
-
-.product-info h3 {
-  color: white;
-  font-size: 16px;
-  font-weight: 500;
-  margin-bottom: 6px;
-}
-
-.price {
-  font-size: 15px;
-  font-weight: 400;
-  color: #10b981;
-  margin: 12px 0px;
-}
-
-
-
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
-} */
-
-/* product */
 .product {
   background-color: #5e6979;
   padding: 60px 0;
