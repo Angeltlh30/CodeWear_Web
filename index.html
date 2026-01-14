@@ -10,6 +10,14 @@
     />
     <link rel="stylesheet" href="./assets/css/home.css" />
   </head>
+  <script>
+    const isLoggedIn = localStorage.getItem("isLoggedIn");
+
+    if (!isLoggedIn) {
+      window.location.href = "./pages/login.html";
+    }
+  </script>
+
   <body>
     <header>
       <div class="header-container">

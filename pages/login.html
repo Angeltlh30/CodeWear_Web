@@ -3,8 +3,6 @@
 <head>
 <meta charset="UTF-8"> <title>Login - CodeWear</title>
 
-<link rel="stylesheet" href="../assets/css/base.css">
-<link rel="stylesheet" href="../assets/css/layout.css">
 <link rel="stylesheet" href="../assets/css/auth.css">
 
 <body style="font-family: 'Roboto', sans-serif; background:#f6f8fb;">
@@ -20,9 +18,15 @@
   <h2>Sign In CodeWear</h2> 
   <p class="subtitle">Access your account</p> 
   
-  <input type="email" placeholder="Email"> 
-  
-  <button style="color:#111827;">SIGN IN</button> 
+    <input 
+      type="email" 
+      id="emailInput"
+      placeholder="Email"
+    > 
+
+    <button id="loginBtn" style="color:#111827;">
+      SIGN IN
+    </button> 
   
   <div class="divider"> 
    <span></span> 
@@ -40,5 +44,7 @@
         <p class="footer-text">Good space, good service.</p>
       </div>
     </main>
+
+  <script src="../assets/js/login.js"></script>
   </body>
 </html>
