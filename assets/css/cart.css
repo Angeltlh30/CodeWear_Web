@@ -108,6 +108,45 @@ header {
 }
 
 /* nav */
+nav {
+  grid-column: 1 / -1;
+  justify-self: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+nav ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 0 60px;
+  padding: 0;
+}
+
+nav li {
+  text-align: center;
+}
+
+nav li a {
+  display: block;
+  padding: 14px 0;
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  transition: all 0.25s ease;
+}
+
+nav li a:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+nav li a.active {
+  font-weight: 600;
+}
+
+
+/* nav-bar */
 .nav-bar {
   grid-column: 1 / -1;
   width: 100%;

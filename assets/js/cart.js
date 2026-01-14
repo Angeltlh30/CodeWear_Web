@@ -1,152 +1,87 @@
-// =========================================================
-// CẤU HÌNH VÀ KHỞI TẠO
-// =========================================================
+/* =======================================================
+   TRANG GIỎ HÀNG (LOGIC UI)
+   ======================================================= */
 const SHIPPING_FEE = 30000;
-const DISCOUNT_AMOUNT = 40000; 
+const DISCOUNT_AMOUNT = 40000;
 
-// Biến lưu trữ giỏ hàng
-let cart = [];
-
-// Khởi chạy khi trang tải xong
 document.addEventListener('DOMContentLoaded', () => {
-    loadCartData();
+    // Load giỏ hàng lần đầu
+    renderCartUI();
 });
 
-/**
- * 1. TẢI DỮ LIỆU TỪ LOCALSTORAGE
- */
-function loadCartData() {
-    const savedCart = localStorage.getItem('cart');
-    if (savedCart) {
-        cart = JSON.parse(savedCart);
-    } else {
-        cart = [];
-    }
-    renderCart();
-}
-
-/**
- * 2. HIỂN THỊ GIAO DIỆN
- */
-function renderCart() {
+function renderCartUI() {
+    // Lấy dữ liệu từ Storage
+    const cart = CartStorage.getCart(); // Gọi từ localStorage.js
     const listContainer = document.getElementById('cart-items-list');
     
-    // Nếu giỏ hàng trống
     if (cart.length === 0) {
         listContainer.innerHTML = `
             <div style="text-align: center; padding: 50px; color: #888;">
                 <i class="fa-solid fa-box-open" style="font-size: 3rem; margin-bottom: 15px; display: block;"></i>
-                <p style="font-size: 1.2rem; font-weight: 500;">Giỏ hàng trống</p>
-                <a href="products.html" style="color: #28a745; text-decoration: none; font-size: 0.9rem;">Tiếp tục mua sắm</a>
-            </div>
-        `;
-        updateSummary(); 
+                <p>Giỏ hàng trống</p>
+                <a href="products.html" style="color: #28a745;">Tiếp tục mua sắm</a>
+            </div>`;
+        updateSummary(cart);
         return;
     }
 
-    // Nếu có sản phẩm
-    listContainer.innerHTML = cart.map((item) => {
+    listContainer.innerHTML = cart.map(item => {
         const totalItemPrice = item.price * item.quantity;
         const imgSrc = item.image ? item.image : '../assets/image/thun1.png';
-
         return `
-        <div class="product-card" data-id="${item.id}">
+        <div class="product-card">
             <div class="product-info">
-                <img src="${imgSrc}" alt="${item.name}" onerror="this.src='../assets/image/thun1.png'">
+                <img src="${imgSrc}" onerror="this.src='../assets/image/thun1.png'">
                 <div class="product-details">
                     <h3>${item.name}</h3>
-                    <p style="color: #666; font-size: 0.9rem;">Mã SP: #${item.id}</p>
-                    
                     <div class="quantity-box">
-                        <span>Số lượng:</span>
                         <button onclick="changeQty('${item.id}', -1)">-</button>
                         <input type="text" value="${item.quantity}" readonly>
                         <button onclick="changeQty('${item.id}', 1)">+</button>
                     </div>
                 </div>
             </div>
-            
             <div class="unit-price">${item.price.toLocaleString()}đ</div>
-            
-            <div class="total-item-price">
-                ${totalItemPrice.toLocaleString()}đ
-            </div>
-            
-            <button class="delete-item" onclick="removeProduct('${item.id}')">
-                <i class="fa fa-trash"></i>
-            </button>
-        </div>
-        `;
+            <div class="total-item-price">${totalItemPrice.toLocaleString()}đ</div>
+            <button class="delete-item" onclick="removeItem('${item.id}')"><i class="fa fa-trash"></i></button>
+        </div>`;
     }).join('');
 
-    updateSummary();
+    updateSummary(cart);
 }
 
-/**
- * 3. TÍNH TỔNG TIỀN
- */
-function updateSummary() {
+function updateSummary(cart) {
     let subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-
-    const shipping = subtotal > 0 ? SHIPPING_FEE : 0;
-    const discount = subtotal > 0 ? DISCOUNT_AMOUNT : 0;
-    
-    let finalTotal = subtotal + shipping - discount;
+    let finalTotal = subtotal > 0 ? (subtotal + SHIPPING_FEE - DISCOUNT_AMOUNT) : 0;
     if (finalTotal < 0) finalTotal = 0;
 
-    const subtotalEl = document.getElementById('subtotal');
-    const finalTotalEl = document.getElementById('final-total');
-
-    if(subtotalEl) subtotalEl.innerText = subtotal.toLocaleString() + 'đ';
-    if(finalTotalEl) finalTotalEl.innerText = finalTotal.toLocaleString() + 'đ';
+    document.getElementById('subtotal').innerText = subtotal.toLocaleString() + 'đ';
+    document.getElementById('final-total').innerText = finalTotal.toLocaleString() + 'đ';
 }
 
-/**
- * 4. THAY ĐỔI SỐ LƯỢNG
- */
-window.changeQty = function(id, delta) {
-    const itemIndex = cart.findIndex(product => product.id === id);
-    if (itemIndex !== -1) {
-        let newQty = cart[itemIndex].quantity + delta;
-        if (newQty < 1) newQty = 1;
-        cart[itemIndex].quantity = newQty;
-        localStorage.setItem('cart', JSON.stringify(cart));
-        renderCart();
+// --- CÁC HÀM XỬ LÝ SỰ KIỆN (GẮN VÀO WINDOW) ---
+
+window.changeQty = (id, delta) => {
+    CartStorage.updateQuantity(id, delta); // Gọi Storage xử lý logic
+    renderCartUI(); // Vẽ lại giao diện
+};
+
+window.removeItem = (id) => {
+    if(confirm("Xóa sản phẩm này?")) {
+        CartStorage.removeItem(id); // Gọi Storage xử lý logic
+        renderCartUI(); // Vẽ lại giao diện
     }
 };
 
-/**
- * 5. XÓA SẢN PHẨM
- */
-window.removeProduct = function(id) {
-    if(confirm("Bạn có chắc chắn muốn xóa sản phẩm này?")) {
-        cart = cart.filter(product => product.id !== id);
-        localStorage.setItem('cart', JSON.stringify(cart));
-        renderCart();
-    }
-};
-
-/**
- * 6. XỬ LÝ ĐẶT HÀNG 
- */
-window.handleCheckout = function() {
-    // Nếu giỏ hàng trống thì chặn lại
+window.handleCheckout = () => {
+    const cart = CartStorage.getCart();
     if (cart.length === 0) {
-        alert("Giỏ hàng trống, vui lòng chọn sản phẩm!");
+        alert("Giỏ hàng trống!");
         return;
     }
-
     const total = document.getElementById('final-total').innerText;
+    alert(`Đặt hàng thành công! Tổng: ${total}`);
     
-    // 1. Thông báo thành công
-    alert(`Đặt hàng thành công! Đơn hàng trị giá ${total} đang được xử lý.`);
-    
-    // 2. Xóa dữ liệu trong biến
-    cart = [];
-
-    // 3. Xóa dữ liệu trong LocalStorage 
-    localStorage.setItem('cart', JSON.stringify([]));
-
-    // 4. Vẽ lại giao diện giỏ hàng
-    renderCart();
+    CartStorage.clearCart(); // Xóa Storage
+    renderCartUI(); // Vẽ lại giao diện
 };
