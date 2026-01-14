@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Contact - CodeWear</title>
+  <meta charset="UTF-8">
+  <title>Contact - CodeWear</title>
 
 <link rel="stylesheet" href="../assets/css/base.css">
 <link rel="stylesheet" href="../assets/css/layout.css">
 <link rel="stylesheet" href="../assets/css/contact.css">
 
-<body style="font-family: 'Roboto', sans-serif; background:#f6f8fb;"></body>
-
-<main class="contact-page">
-
 </head>
 
-<body>
+<body style="font-family: 'Roboto', sans-serif; background:#f6f8fb;">
 
 <!-- HEADER -->
 <header class="site-header">
@@ -36,11 +32,13 @@
 </div>
 
     <nav>
-      <a href="../index.html">TRANG CHỦ</a>
-      <a href="products.html">SẢN PHẨM</a>
-      <a href="about.html">GIỚI THIỆU</a>
-      <a href="contact.html" class="active">LIÊN HỆ</a>
-    </nav>
+  <ul>
+    <li><a href="../index.html">TRANG CHỦ</a></li>
+    <li><a href="products.html">SẢN PHẨM</a></li>
+    <li><a href="about.html">GIỚI THIỆU</a></li>
+    <li><a href="contact.html" class="active">LIÊN HỆ</a></li>
+  </ul>
+</nav>
 
   </div>
 </header>
@@ -50,16 +48,6 @@
 
   <!-- Left menu -->
   <aside class="contact-sidebar">
-
-    <div class="contact-block">
-      <h3>Hướng dẫn đặt hàng</h3>
-      <ul>
-        <li>Trang chủ</li>
-        <li>Sản phẩm</li>
-        <li>Bộ sưu tập</li>
-        <li>Liên hệ</li>
-      </ul>
-    </div>
 
     <div class="contact-block">
       <h3>Câu hỏi thường gặp</h3>
@@ -74,61 +62,116 @@
 
   <!-- Right form -->
   <section class="contact-form">
+    
+   <div class="contact-row">
+  <div class="input-group">
+    <label>HỌ VÀ TÊN <span class="required">*</span></label>
+    <input type="text" placeholder="Nhập họ và tên">
+  </div>
 
-    <h2>Liên hệ</h2>
+  <div class="input-group">
+    <label>ĐIỆN THOẠI <span class="required">*</span></label>
+    <input type="text" placeholder="Nhập số điện thoại">
+  </div>
+</div>
 
-    <div class="contact-row">
-      <div class="input-group">
-        <label>Họ và tên *</label>
-        <input type="text" placeholder="Nhập họ và tên">
-      </div>
+<div class="input-group">
+  <label>EMAIL <span class="required">*</span></label>
+  <input type="email" placeholder="Nhập địa chỉ Email">
+</div>
 
-      <div class="input-group">
-        <label>Điện thoại *</label>
-        <input type="text" placeholder="Nhập số điện thoại">
-      </div>
-    </div>
+<div class="input-group">
+  <label>NỘI DUNG <span class="required">*</span></label>
+  <textarea placeholder="Nhập nội dung liên hệ"></textarea>
+</div>
 
-    <div class="input-group">
-      <label>Email *</label>
-      <input type="email" placeholder="Nhập địa chỉ Email">
-    </div>
-
-    <div class="input-group">
-      <label>Nội dung *</label>
-      <textarea placeholder="Nhập nội dung liên hệ"></textarea>
-    </div>
-
-    <button class="btn-send">Gửi</button>
+<button class="btn-send">Gửi</button>
 
   </section>
 
 </main>
 
-<!-- FOOTER -->
-<footer class="site-footer">
-
+<footer>
   <div class="footer-container">
 
+    <!-- LEFT -->
     <div class="footer-left">
-      <img src="../assets/images/logo.png" />
-      <p>© 2026 CodeWear. All rights reserved</p>
+      <img src="../assets/image/logoFCode.png" />
+      <h3>Code Wear</h3>
+      <p class="copyright">
+        © 2026 <strong>CodeWear</strong>. All rights reserved
+      </p>
     </div>
 
+    <!-- CENTER -->
     <div class="footer-center">
-      <p>Lô E2a-7, Đường D1, Khu CNC, TP Thủ Đức</p>
-      <p>0123456789</p>
-      <p>codewear@gmail.com</p>
+      <div class="address">
+        <img class="icon" src="../assets/image/map.png" />
+        Lô E2a-7, Đường D1, Khu Công nghệ cao (KCNC),<br />
+        P. Long Thạnh Mỹ, TP. Thủ Đức, TP.HCM.
+      </div>
+
+      <div class="phonenumber">
+        <img class="icon" src="../assets/image/call.png" />
+        <span>0123456789</span>
+      </div>
+
+      <div class="email">
+        <img class="icon" src="../assets/image/mail.png" />
+        <span>codewear@gmail.com</span>
+      </div>
     </div>
 
- <div class="footer-right">
-  <img src="../assets/image/facebook.png" width="32" height="32">
-  <img src="../assets/image/instagram.png" width="32" height="32">
-  <img src="../assets/image/youtube.png" width="32" height="32">
-  <img src="../assets/image/linkedln.png" width="32" height="32">
-</div>
+    <!-- RIGHT -->
+    <div class="footer-right">
+      <a
+        href="https://www.facebook.com/fcodeclub"
+        class="social-item facebook"
+        target="_blank"
+      >
+        <img
+          class="social-icon"
+          src="../assets/image/facebook.png"
+          alt="Facebook"
+        />
+        <span>Facebook</span>
+      </a>
 
+      <a href="#" class="social-item instagram">
+        <img
+          class="social-icon"
+          src="../assets/image/instagram.png"
+          alt="Instagram"
+        />
+        <span>Instagram</span>
+      </a>
+
+      <a href="#" class="social-item youtube">
+        <img
+          class="social-icon"
+          src="../assets/image/youtube.png"
+          alt="Youtube"
+        />
+        <span>Youtube</span>
+      </a>
+
+      <a href="#" class="social-item linkedin">
+        <img
+          class="social-icon"
+          src="../assets/image/linkedln.png"
+          alt="LinkedIn"
+        />
+        <span>LinkedIn</span>
+      </a>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <img
+      class="dmca-icon"
+      src="../assets/image/dmca-logo.png"
+      alt="DMCA Protected"
+    />
+  </div>
 </footer>
-
-</body>
-</html>
