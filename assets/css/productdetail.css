@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f5f6f8;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+/* PRODUCT */
+.product {
+  display: flex;
+  gap: 40px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* IMAGES */
+.product-images {
+  width: 45%;
+}
+
+.main-img {
+  width: 100%;
+  border-radius: 12px;
+  transition: transform .4s ease;
+}
+
+.main-img:hover {
+  transform: scale(1.05);
+}
+
+.thumbs {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.thumbs img {
+  width: 70px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.thumbs img:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* INFO */
+.product-info {
+  width: 55%;
+}
+
+.product-info h1 {
+  margin-bottom: 15px;
+}
+
+.price {
+  margin-bottom: 20px;
+}
+
+.price .new {
+  color: #e53935;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.price .old {
+  margin-left: 10px;
+  color: #999;
+  text-decoration: line-through;
+}
+
+/* SIZE */
+.size p {
+  margin-bottom: 8px;
+}
+
+.size button {
+  padding: 8px 14px;
+  margin-right: 8px;
+  border: 1px solid #ccc;
+  background: #fff;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.size button:hover {
+  background: #222;
+  color: #fff;
+}
+
+/* BUY */
+.buy-btn {
+  display: block;
+  margin: 25px 0;
+  padding: 14px;
+  width: 200px;
+  background: #1e40af;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: .4s;
+}
+
+.buy-btn:hover {
+  background: #0f172a;
+  transform: translateY(-3px);
+}
+
+/* DESC */
+.desc ul {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+.desc li {
+  margin-bottom: 8px;
+}
+
+/* RELATED */
+h2 {
+  margin: 40px 0 20px;
+}
+
+.related {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #fff;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+  transition: .4s;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.card span {
+  color: #e53935;
+  font-weight: bold;
+}
