@@ -82,14 +82,14 @@
 }
 
 /* Social icons */
-.socials {
+.socials-icons {
   display: flex;
   justify-content: center;
   gap: 18px;
   margin-bottom: 28px;
 }
 
-.socials i {
+.socials-icons img {
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -102,7 +102,7 @@
   transition: 0.25s;
 }
 
-.socials i:hover {
+.socials-icons img:hover {
   background: #111827;
   color: white;
 }
@@ -111,4 +111,15 @@
 .footer-text {
   color: #9ca3af;
   font-size: 14px;
+}
+
+.login-logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.login-logo img {
+  width: 60px;
+  height: auto;
 }
