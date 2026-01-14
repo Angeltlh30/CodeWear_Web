@@ -59,8 +59,8 @@ CodeWear_Web/
 │
 ├── assets/
 │   ├── css/
-│   │   ├── base.css
-│   │   ├── layout.css
+│   │   ├── productDetail.css
+│   │   ├── contact.css
 │   │   ├── home.css
 │   │   ├── products.css
 │   │   ├── cart.css
