@@ -10,7 +10,8 @@ Dự án mô phỏng một website thương mại điện tử cơ bản, tập 
 * Quy trình thiết kế → prototype → code
 * Làm việc nhóm với Git & GitHub
 * Triển khai website thực tế (deploy)
-DEMO : https://angeltlh30.github.io/CodeWear_Web/
+
+**DEMO** : https://angeltlh30.github.io/CodeWear_Web/
 ---
 
 ##  Mục tiêu dự án
