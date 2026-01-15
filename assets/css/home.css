@@ -10,6 +10,21 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+/* CSS cho số lượng giỏ hàng */
+#cart-count {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: #ef4444;
+  color: white;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 50%;
+  min-width: 18px;
+  text-align: center;
+}
+
 /* header*/
 header {
   width: 100%;
