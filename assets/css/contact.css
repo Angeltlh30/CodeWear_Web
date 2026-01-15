@@ -316,121 +316,123 @@ nav li a.active {
 
 /* footer */
 footer {
-  background-color: #111827;
-  color: #e0e0e0;
-  padding: 50px 5% 30px;
-  position: relative;
+    background-color: #111827;
+    color: #e0e0e0;
+    padding: 50px 5% 30px;
+    position: relative;
+    width: 100%;
+    margin-top: auto;
 }
 
 .footer-container {
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 240px;
-  max-width: 1300px;
-  margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 240px;
+    max-width: 1300px;
+    margin: 0 auto;
 }
 
 .footer-left {
-  flex: 0 0 260px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+    flex: 0 0 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .footer-left img {
-  height: 50px;
-  width: auto;
-  margin-bottom: 12px;
-  display: block;
+    height: 50px;
+    width: auto;
+    margin-bottom: 12px;
+    display: block;
 }
 
 .footer-left h3 {
-  color: #ffffff;
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin: 0 0 8px 0;
-  letter-spacing: 0.5px;
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 0 8px 0;
+    letter-spacing: 0.5px;
 }
 
 .footer-left .copyright {
-  font-size: 0.9rem;
-  color: #a0a0a0;
-  margin: 0;
-  line-height: 1.5;
+    font-size: 0.9rem;
+    color: #a0a0a0;
+    margin: 0;
+    line-height: 1.5;
 }
 
 .footer-left .copyright strong {
-  color: #ffffff;
+    color: #ffffff;
 }
 
 .footer-center {
-  flex: 1.2;
-  min-width: 280px;
+    flex: 1.2;
+    min-width: 280px;
 }
 
 .footer-center > div {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  margin-bottom: 16px;
-  font-size: 0.95rem;
-  line-height: 1.5;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 16px;
+    font-size: 0.95rem;
+    line-height: 1.5;
 }
 
 .footer-center .icon {
-  width: 20px;
-  height: 20px;
-  flex-shrink: 0;
-  margin-top: 3px;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    margin-top: 3px;
 }
 
 .footer-center address,
 .footer-center .phonenumber span,
 .footer-center .email span {
-  color: #d0d0d0;
+    color: #d0d0d0;
 }
 
 .footer-center address {
-  font-style: normal;
+    font-style: normal;
 }
 
 .footer-right {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  min-width: 180px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-width: 180px;
 }
 
 .social-item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: #d0d0d0;
-  text-decoration: none;
-  transition: all 0.2s ease;
-  font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #d0d0d0;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    font-size: 0.95rem;
 }
 
 .social-item:hover {
-  color: #ffffff;
-  transform: translateX(4px);
+    color: #ffffff;
+    transform: translateX(4px);
 }
 
 .social-item .social-icon {
-  width: 24px;
-  height: 24px;
-  flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
 }
 
 .footer-bottom {
-  text-align: end;
-  margin-top: 20px;
+    text-align: end;
+    margin-top: 20px;
 }
 
 .footer-bottom .dmca-icon {
-  height: 45px;
-  width: auto;
+    height: 45px;
+    width: auto;
 }
