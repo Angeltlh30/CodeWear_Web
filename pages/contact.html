@@ -4,17 +4,25 @@
     <meta charset="UTF-8" />
     <title>Contact - CodeWear</title>
 
-    <link rel="stylesheet" href="../assets/css/base.css" />
-    <link rel="stylesheet" href="../assets/css/layout.css" />
+    <link rel="stylesheet" href="../assets/css/home.css" />
     <link rel="stylesheet" href="../assets/css/contact.css" />
+
+    <style>
+        #cart-count {
+            position: absolute; top: -5px; right: -5px;
+            background-color: #ef4444; color: white;
+            font-size: 11px; font-weight: bold;
+            padding: 2px 6px; border-radius: 50%;
+            min-width: 18px; text-align: center;
+        }
+    </style>
   </head>
 
   <body style="font-family: 'Roboto', sans-serif; background: #f6f8fb">
-    <!-- HEADER -->
     <header>
       <div class="header-container">
         <div class="logo">
-          <img src="../assets/image/logoFCode.png" alt="" />
+          <img src="../assets/image/logoFCode.png" alt="logo" />
           <span>CodeWear</span>
         </div>
 
@@ -26,7 +34,7 @@
         </div>
 
         <div class="header-icons">
-          <a href="./cart.html" style="position: relative">
+          <a href="cart.html" style="position: relative;">
             <img src="../assets/image/shopping-cart.png" />
             <span id="cart-count">0</span>
           </a>
@@ -38,17 +46,15 @@
         <nav>
           <ul>
             <li><a href="../index.html">TRANG CHỦ</a></li>
-            <li><a href="./products.html">SẢN PHẨM</a></li>
-            <li><a href="./about.html">GIỚI THIỆU</a></li>
-            <li><a href="#" class="active">LIÊN HỆ</a></li>
+            <li><a href="products.html">SẢN PHẨM</a></li>
+            <li><a href="about.html">GIỚI THIỆU</a></li>
+            <li><a href="contact.html" class="active">LIÊN HỆ</a></li>
           </ul>
         </nav>
       </div>
     </header>
 
-    <!-- ================= CONTACT BODY ================= -->
     <main class="contact-page">
-      <!-- Left menu -->
       <aside class="contact-sidebar">
         <div class="contact-block">
           <h3>Câu hỏi thường gặp</h3>
@@ -60,7 +66,6 @@
         </div>
       </aside>
 
-      <!-- Right form -->
       <section class="contact-form">
         <div class="contact-row">
           <div class="input-group">
@@ -161,13 +166,14 @@
         </div>
       </div>
 
-      <div class="footer-bottom">
-        <img
-          class="dmca-icon"
-          src="../assets/image/dmca-logo.png"
-          alt="DMCA Protected"
-        />
+        <div class="footer-bottom" style="text-align: right; margin-top: 20px;">
+          <a href="//www.dmca.com/Protection/Status.aspx?ID=7184004d-b4bc-4526-9e2c-b2a7c2009541" title="DMCA.com Protection Status" class="dmca-badge"> 
+              <img src="https://images.dmca.com/Badges/dmca-badge-w100-2x1-03.png?ID=7184004d-b4bc-4526-9e2c-b2a7c2009541" alt="DMCA.com Protection Status" />
+          </a> 
+          <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"></script>
       </div>
     </footer>
+
+    <script src="../assets/js/home.js"></script>
   </body>
 </html>

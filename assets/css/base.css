@@ -444,11 +444,18 @@ footer {
 }
 
 .footer-bottom {
-    text-align: end;
-    margin-top: 20px;
+  display: flex;             
+  justify-content: flex-end; 
+  align-items: center;       
+  margin-top: 20px;
+  width: 100%;              
+}
+
+.footer-bottom .dmca-badge img {
+    display: inline-block; s
 }
 
 .footer-bottom .dmca-icon {
-    height: 45px;
-    width: auto;
+  height: 45px;
+  width: auto;
 }

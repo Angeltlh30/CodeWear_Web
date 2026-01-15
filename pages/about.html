@@ -1,21 +1,30 @@
 <!DOCTYPE html>
 <html lang="vi">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CodeWear - Giới Thiệu</title>
-    <link rel="stylesheet" href="../assets/css/base.css" />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-      rel="stylesheet"
-    />
-  </head>
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/home.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <style>
+        #cart-count {
+            position: absolute; top: -5px; right: -5px;
+            background-color: #ef4444; color: white;
+            font-size: 11px; font-weight: bold;
+            padding: 2px 6px; border-radius: 50%;
+            min-width: 18px; text-align: center;
+        }
+    </style>
+</head>
 
-  <body>
+<body>
+
     <header>
       <div class="header-container">
         <div class="logo">
-          <img src="../assets/image/logoFCode.png" alt="" />
+          <img src="../assets/image/logoFCode.png" alt="logo" />
           <span>CodeWear</span>
         </div>
 
@@ -27,7 +36,7 @@
         </div>
 
         <div class="header-icons">
-          <a href="./cart.html" style="position: relative">
+          <a href="cart.html" style="position: relative;">
             <img src="../assets/image/shopping-cart.png" />
             <span id="cart-count">0</span>
           </a>
@@ -39,168 +48,105 @@
         <nav>
           <ul>
             <li><a href="../index.html">TRANG CHỦ</a></li>
-            <li><a href="./products.html">SẢN PHẨM</a></li>
-            <li><a href="#" class="active">GIỚI THIỆU</a></li>
-            <li><a href="./contact.html">LIÊN HỆ</a></li>
+            <li><a href="products.html">SẢN PHẨM</a></li>
+            <li><a href="about.html" class="active">GIỚI THIỆU</a></li>
+            <li><a href="contact.html">LIÊN HỆ</a></li>
           </ul>
         </nav>
       </div>
     </header>
 
     <section class="hero-banner">
-      <img src="../assets/image/banner.png" alt="Fashion Banner" />
+        <img src="../assets/image/banner.png" alt="Fashion Banner"> 
     </section>
 
     <div class="container">
-      <div class="slogan-bar">
-        “Mặc phong cách – Xây cộng đồng – Viết tương lai F-Code”
-      </div>
-
-      <section class="brand-story">
-        <h2 class="section-title">Brand Story</h2>
-
-        <div class="story-content">
-          <div class="story-img">
-            <img src="../assets/image/coming_soon.png" alt="Coming Soon" />
-          </div>
-          <div class="story-text">
-            <p>
-              Chúng tôi nhận ra rằng nhiều CLB công nghệ thiếu nguồn lực để duy
-              trì hoạt động và phát triển cộng đồng lập trình trẻ.
-            </p>
-            <p>
-              Vì vậy, shop thời trang online này ra đời – nơi mỗi sản phẩm được
-              bán ra là một khoản gây quỹ trực tiếp cho CLB F Code.
-            </p>
-            <p>
-              Không chỉ bán quần áo, chúng tôi xây dựng một hệ sinh thái nơi
-              thời trang hỗ trợ tri thức, và cộng đồng tạo ra giá trị lâu dài.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <hr
-        style="
-          border: 0;
-          border-top: 2px solid #333;
-          margin: 40px auto;
-          width: 200px;
-        "
-      />
-
-      <section class="social-proof">
-        <div class="sp-layout">
-          <div class="sp-left">
-            <img
-              src="../assets/image/logoFCode.png"
-              class="sp-logo"
-              alt="Logo"
-            />
-            <h2 class="brand-name">CodeWear</h2>
-            <div class="sp-badge">Social Proof</div>
-          </div>
-
-          <div class="sp-right">
-            <img src="../assets/image/str1.png" alt="Activity 1" />
-            <img src="../assets/image/str2.png" alt="Activity 2" />
-          </div>
+        
+        <div class="slogan-bar">
+            “Mặc phong cách – Xây cộng đồng – Viết tương lai F-Code”
         </div>
 
-        <p class="sp-quote">
-          “Nhờ nguồn quỹ từ shop, CLB F Code đã tổ chức được các buổi chia sẻ
-          lập trình miễn phí cho sinh viên.”
-        </p>
+        <section class="brand-story">
+            <h2 class="section-title">Brand Story</h2>
+            
+            <div class="story-content">
+                <div class="story-img">
+                    <img src="../assets/image/coming_soon.png" alt="Coming Soon">
+                </div>
+                <div class="story-text">
+                    <p>Chúng tôi nhận ra rằng nhiều CLB công nghệ thiếu nguồn lực để duy trì hoạt động và phát triển cộng đồng lập trình trẻ.</p>
+                    <p>Vì vậy, shop thời trang online này ra đời – nơi mỗi sản phẩm được bán ra là một khoản gây quỹ trực tiếp cho CLB F Code.</p>
+                    <p>Không chỉ bán quần áo, chúng tôi xây dựng một hệ sinh thái nơi thời trang hỗ trợ tri thức, và cộng đồng tạo ra giá trị lâu dài.</p>
+                </div>
+            </div>
+        </section>
 
-        <div class="proof-grid">
-          <img src="../assets/image/t1.png" alt="" />
-          <img src="../assets/image/t2.png" alt="" />
-          <img src="../assets/image/t3.png" alt="" />
-          <img src="../assets/image/t4.png" alt="" />
-        </div>
-      </section>
+        <hr style="border: 0; border-top: 2px solid #333; margin: 40px auto; width: 200px;">
+
+        <section class="social-proof">
+            <div class="sp-layout">
+                <div class="sp-left">
+                    <img src="../assets/image/logoFCode.png" class="sp-logo" alt="Logo">
+                    <h2 class="brand-name">CodeWear</h2>
+                    <div class="sp-badge">Social Proof</div>
+                </div>
+
+                <div class="sp-right">
+                    <img src="../assets/image/str1.png" alt="Activity 1">
+                    <img src="../assets/image/str2.png" alt="Activity 2">
+                </div>
+            </div>
+
+            <p class="sp-quote">
+                “Nhờ nguồn quỹ từ shop, CLB F Code đã tổ chức được các buổi chia sẻ lập trình miễn phí cho sinh viên.”
+            </p>
+
+            <div class="proof-grid">
+                <img src="../assets/image/t1.png" alt="">
+                <img src="../assets/image/t2.png" alt="">
+                <img src="../assets/image/t3.png" alt="">
+                <img src="../assets/image/t4.png" alt="">
+            </div>
+        </section>
     </div>
 
     <footer class="site-footer">
-      <div class="footer-container">
-        <div class="footer-left">
-          <img src="../assets/image/logoFCode.png" alt="CodeWear Logo" />
-          <h3>Code Wear</h3>
-          <p class="copyright">
-            © 2026 <strong>CodeWear</strong>. All rights reserved
-          </p>
+        <div class="footer-container">
+            <div class="footer-left">
+                <img src="../assets/image/logoFCode.png" />
+                <h3>Code Wear</h3>
+                <p class="copyright">© 2026 <strong>CodeWear</strong>. All rights reserved</p>
+            </div>
+            <div class="footer-center">
+                <div class="address">
+                    <img class="icon" src="../assets/image/map.png" /> 
+                    <span>Lô E2a-7, Đường D1, Khu CNC, TP Thủ Đức</span>
+                </div>
+                <div class="phonenumber">
+                    <img class="icon" src="../assets/image/call.png" /> 
+                    <span>0123456789</span>
+                </div>
+                <div class="email">
+                    <img class="icon" src="../assets/image/mail.png" /> 
+                    <span>codewear@gmail.com</span>
+                </div>
+            </div>
+            <div class="footer-right">
+                <a href="#" class="social-item"><img class="social-icon" src="../assets/image/facebook.png"><span>Facebook</span></a>
+                <a href="#" class="social-item"><img class="social-icon" src="../assets/image/instagram.png"><span>Instagram</span></a>
+                <a href="#" class="social-item"><img class="social-icon" src="../assets/image/youtube.png"><span>Youtube</span></a>
+                <a href="#" class="social-item"><img class="social-icon" src="../assets/image/linkedln.png"><span>LinkedIn</span></a>
+            </div>
         </div>
 
-        <div class="footer-center">
-          <div class="address">
-            <img class="icon" src="../assets/image/map.png" alt="Map" />
-            <span>
-              Lô E2a-7, Đường D1, Khu Công nghệ cao (KCNC),<br />
-              P. Long Thạnh Mỹ, TP. Thủ Đức, TP.HCM.
-            </span>
-          </div>
-
-          <div class="phonenumber">
-            <img class="icon" src="../assets/image/call.png" alt="Phone" />
-            <span>0123456789</span>
-          </div>
-
-          <div class="email">
-            <img class="icon" src="../assets/image/mail.png" alt="Mail" />
-            <span>codewear@gmail.com</span>
-          </div>
+        <div class="footer-bottom" style="text-align: right; margin-top: 20px;">
+            <a href="//www.dmca.com/Protection/Status.aspx?ID=7184004d-b4bc-4526-9e2c-b2a7c2009541" title="DMCA.com Protection Status" class="dmca-badge"> 
+                <img src="https://images.dmca.com/Badges/dmca-badge-w100-2x1-03.png?ID=7184004d-b4bc-4526-9e2c-b2a7c2009541" alt="DMCA.com Protection Status" />
+            </a> 
+            <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"></script>
         </div>
-
-        <div class="footer-right">
-          <a
-            href="https://www.facebook.com/fcodeclub"
-            class="social-item facebook"
-            target="_blank"
-          >
-            <img
-              class="social-icon"
-              src="../assets/image/facebook.png"
-              alt="Facebook"
-            />
-            <span>Facebook</span>
-          </a>
-
-          <a href="#" class="social-item instagram">
-            <img
-              class="social-icon"
-              src="../assets/image/instagram.png"
-              alt="Instagram"
-            />
-            <span>Instagram</span>
-          </a>
-
-          <a href="#" class="social-item youtube">
-            <img
-              class="social-icon"
-              src="../assets/image/youtube.png"
-              alt="Youtube"
-            />
-            <span>Youtube</span>
-          </a>
-
-          <a href="#" class="social-item linkedin">
-            <img
-              class="social-icon"
-              src="../assets/image/linkedln.png"
-              alt="LinkedIn"
-            />
-            <span>LinkedIn</span>
-          </a>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <img
-          class="dmca-icon"
-          src="../assets/image/dmca-logo.png"
-          alt="DMCA Protected"
-        />
-      </div>
     </footer>
-  </body>
+
+    <script src="../assets/js/home.js"></script> 
+</body>
 </html>
