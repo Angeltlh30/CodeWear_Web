@@ -13,6 +13,26 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
+    
+    <style>
+        #cart-count {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background-color: #ef4444; /* Màu đỏ */
+            color: white;
+            font-size: 11px;
+            font-weight: bold;
+            padding: 2px 6px;
+            border-radius: 50%;
+            min-width: 18px;
+            text-align: center;
+        }
+        /* Hiệu ứng cuộn mượt cho toàn trang */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
   </head>
   <body>
     <header>
@@ -23,15 +43,16 @@
         </div>
 
         <div class="search-box">
-          <input type="text" placeholder="Tìm kiếm" />
+          <input type="text" id="search-input" placeholder="Tìm kiếm" />
           <button>
             <img src="../assets/image/search.png" alt="Search" />
           </button>
         </div>
 
         <div class="header-icons">
-          <a href="./cart.html">
+          <a href="./cart.html" class="cart-icon-wrapper" style="position: relative;">
             <img src="../assets/image/shopping-cart.png" alt="Cart" />
+            <span id="cart-count"></span>
           </a>
           <a href="#">
             <img src="../assets/image/user.png" alt="User" />
@@ -50,11 +71,8 @@
     </header>
 
     <div class="main-wrapper">
-      <main
-        class="main-layout"
-        id="products"
-        style="width: 100%; display: flex; gap: 24px"
-      >
+      <main class="main-layout" id="products" style="width: 100%; display: flex; gap: 24px">
+        
         <aside class="sidebar">
           <h2 class="sidebar-title">Danh mục</h2>
 
@@ -88,10 +106,12 @@
           </div>
         </aside>
 
-        <section class="product-grid">
-          <p style="text-align: center; width: 100%">
-            Đang tải danh sách sản phẩm...
-          </p>
+        <section class="products-area" style="flex: 1;">
+            <div class="product-grid" id="products-container">
+                <p style="text-align: center; width: 100%">
+                    <i class="fas fa-spinner fa-spin"></i> Đang tải danh sách sản phẩm...
+                </p>
+            </div>
         </section>
       </main>
     </div>
@@ -127,59 +147,33 @@
         </div>
 
         <div class="footer-right">
-          <a
-            href="https://www.facebook.com/fcodeclub"
-            class="social-item facebook"
-            target="_blank"
-          >
-            <img
-              class="social-icon"
-              src="../assets/image/facebook.png"
-              alt="Facebook"
-            />
+          <a href="https://www.facebook.com/fcodeclub" class="social-item facebook" target="_blank">
+            <img class="social-icon" src="../assets/image/facebook.png" alt="Facebook" />
             <span>Facebook</span>
           </a>
-
           <a href="#" class="social-item instagram">
-            <img
-              class="social-icon"
-              src="../assets/image/instagram.png"
-              alt="Instagram"
-            />
+            <img class="social-icon" src="../assets/image/instagram.png" alt="Instagram" />
             <span>Instagram</span>
           </a>
-
           <a href="#" class="social-item youtube">
-            <img
-              class="social-icon"
-              src="../assets/image/youtube.png"
-              alt="Youtube"
-            />
+            <img class="social-icon" src="../assets/image/youtube.png" alt="Youtube" />
             <span>Youtube</span>
           </a>
-
           <a href="#" class="social-item linkedin">
-            <img
-              class="social-icon"
-              src="../assets/image/linkedln.png"
-              alt="LinkedIn"
-            />
+            <img class="social-icon" src="../assets/image/linkedln.png" alt="LinkedIn" />
             <span>LinkedIn</span>
           </a>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <img
-          class="dmca-icon"
-          src="../assets/image/dmca-logo.png"
-          alt="DMCA Protected"
-        />
+        <img class="dmca-icon" src="../assets/image/dmca-logo.png" alt="DMCA Protected" />
       </div>
     </footer>
 
     <script src="../assets/js/api/mockapi.js"></script>
     <script src="../assets/js/storage/localStorage.js"></script>
     <script src="../assets/js/products.js"></script>
+    <script src="../assets/js/home.js"></script>
   </body>
 </html>
