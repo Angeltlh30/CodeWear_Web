@@ -60,8 +60,8 @@ CodeWear_Web/
 │
 ├── assets/
 │   ├── css/
-│   │   ├── productDetail.css
-│   │   ├── contact.css
+│   │   ├── base.css
+│   │   ├── layout.css
 │   │   ├── home.css
 │   │   ├── products.css
 │   │   ├── cart.css
@@ -69,9 +69,7 @@ CodeWear_Web/
 │   │
 │   ├── js/
 │   │   ├── api/
-│   │   │   └── mockapi.js
 │   │   ├── storage/
-│   │   │   └── localStorage.js
 │   │   ├── home.js
 │   │   ├── products.js
 │   │   ├── product-detail.js
@@ -80,7 +78,17 @@ CodeWear_Web/
 │   │
 │   └── images/
 │
-├── README.md
+├── backend/
+│   ├── config/
+│   ├── controllers/
+│   ├── models/
+│   ├── routes/
+│   ├── server.js
+│   └── package.json
+│
+├── .gitignore
+└── README.md
+
 ```
 
 ##  Chức năng chính
