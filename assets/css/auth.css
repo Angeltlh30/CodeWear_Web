@@ -9,12 +9,13 @@
 }
 
 .login-card {
-  width: 420px;
+  width: 576px;
   background: #fff;
   border-radius: 24px;
   padding: 48px 40px;
   text-align: center;
   box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    height: 683px;
 }
 
 /* Title */
@@ -45,22 +46,53 @@
 
 /* Button */
 .login-card button {
-  width: 200px;
-  height: 44px;
-  border-radius: 22px;
-  border: none;
-  background: #22c55e;
-  color: #111827;
-  font-size: 14px;
-  font-weight: 600;
-  cursor: pointer;
-  margin: 0 auto 26px;
-  display: block;
+  border-style: none;
+    border-color: inherit;
+    border-width: medium;
+    width: 200px;
+  height: 45px;
+    border-radius: 22px;
+    background: #22c55e;
+    color: #111827;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 0 auto 26px;
+    display: block;
 }
 
 .login-card button:hover {
   background: #16a34a;
 }
+.register-card button {
+    width: 200px;
+    height: 44px;
+    border-radius: 22px;
+    border: none;
+    background: #22c55e;
+    color: #111827;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 0 auto 26px;
+    display: block;
+}
+
+    .register-card button:hover {
+        background: #16a34a;
+    }
+.button-container {
+    display: flex; 
+    gap: 10px;
+    justify-content: center;
+    height: 280px;
+    width: 564px;
+}
+button {
+    color: #111827;
+    border-radius: 30px; 
+}
+
 
 /* OR divider */
 .divider {
@@ -82,23 +114,24 @@
 }
 
 .social-icons {
-  display: flex;
-  justify-content: center;
-  gap: 18px;
-  margin-bottom: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
 }
 
-.social-icons img {
-  width: 40px;
-  height: 40px;
-  object-fit: contain;
-  display: block;
-  background: transparent;
-}
+    .social-icons img {
+        width: 42px;
+        height: auto;
+        cursor: pointer;
+        margin-right: 30px;
+    }
 
-.social-icons img:hover {
-  transform: scale(1.15);
-}
+        .social-icons img:hover {
+            transform: scale(1.1);
+            transition: 0.2s;
+        }
+
 
 /* Footer text */
 .footer-text {
