@@ -1,179 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
+<head>
+    <meta charset="UTF-8">
     <title>Contact - CodeWear</title>
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/layout.css">
+    <link rel="stylesheet" href="../assets/css/contact.css">
+</head>
+<body style="font-family: 'Roboto', sans-serif; background:#f6f8fb;">
 
-    <link rel="stylesheet" href="../assets/css/home.css" />
-    <link rel="stylesheet" href="../assets/css/contact.css" />
-
-    <style>
-        #cart-count {
-            position: absolute; top: -5px; right: -5px;
-            background-color: #ef4444; color: white;
-            font-size: 11px; font-weight: bold;
-            padding: 2px 6px; border-radius: 50%;
-            min-width: 18px; text-align: center;
-        }
-    </style>
-  </head>
-
-  <body style="font-family: 'Roboto', sans-serif; background: #f6f8fb">
-    <header>
-      <div class="header-container">
+<!-- HEADER -->
+<header class="site-header">
+    <div class="header-container">
         <div class="logo">
-          <img src="../assets/image/logoFCode.png" alt="logo" />
-          <span>CodeWear</span>
+            <img src="../assets/image/logoFCode.png">
+            <span>CodeWear</span>
         </div>
 
         <div class="search-box">
-          <input type="text" placeholder="Tìm kiếm" />
-          <button>
-            <img src="../assets/image/search.png" alt="" />
-          </button>
+            <input type="text" placeholder="Tìm kiếm">
+            <img src="../assets/image/search.png" width="20" height="20">
         </div>
 
         <div class="header-icons">
-          <a href="cart.html" style="position: relative;">
+            <a href="cart.html" style="position: relative;">
             <img src="../assets/image/shopping-cart.png" />
-            <span id="cart-count">0</span>
-          </a>
-          <a href="#">
-            <img src="../assets/image/user.png" />
-          </a>
+            <span id="cart-count"></span>
+            </a>
+            <a href="order-history.html">
+        <img src="../assets/image/user.png" width="28" height="28">
+            </a>
         </div>
 
         <nav>
-          <ul>
-            <li><a href="../index.html">TRANG CHỦ</a></li>
-            <li><a href="products.html">SẢN PHẨM</a></li>
-            <li><a href="about.html">GIỚI THIỆU</a></li>
-            <li><a href="contact.html" class="active">LIÊN HỆ</a></li>
-          </ul>
+            <ul>
+                <li><a href="../index.html">TRANG CHỦ</a></li>
+                <li><a href="products.html">SẢN PHẨM</a></li>
+                <li><a href="about.html">GIỚI THIỆU</a></li>
+                <li><a href="contact.html" class="active">LIÊN HỆ</a></li>
+            </ul>
         </nav>
-      </div>
-    </header>
+    </div>
+</header>
 
-    <main class="contact-page">
-      <aside class="contact-sidebar">
+<!-- ================= CONTACT BODY ================= -->
+<main class="contact-page">
+
+    <!-- Left menu -->
+    <aside class="contact-sidebar">
         <div class="contact-block">
-          <h3>Câu hỏi thường gặp</h3>
-          <ul>
-            <li>Sản phẩm</li>
-            <li>Đặt hàng & giao hàng</li>
-            <li>Thanh toán</li>
-          </ul>
+            <h3>Câu hỏi thường gặp</h3>
+            <ul>
+                <li>Sản phẩm</li>
+                <li>Đặt hàng & giao hàng</li>
+                <li>Thanh toán</li>
+            </ul>
         </div>
-      </aside>
+    </aside>
 
-      <section class="contact-form">
+    <!-- Right form -->
+    <section class="contact-form">
         <div class="contact-row">
-          <div class="input-group">
-            <label>HỌ VÀ TÊN <span class="required">*</span></label>
-            <input type="text" placeholder="Nhập họ và tên" />
-          </div>
+            <div class="input-group">
+                <label>HỌ VÀ TÊN <span class="required">*</span></label>
+                <input type="text" placeholder="Nhập họ và tên">
+            </div>
 
-          <div class="input-group">
-            <label>ĐIỆN THOẠI <span class="required">*</span></label>
-            <input type="text" placeholder="Nhập số điện thoại" />
-          </div>
+            <div class="input-group">
+                <label>ĐIỆN THOẠI <span class="required">*</span></label>
+                <input type="text" placeholder="Nhập số điện thoại">
+            </div>
         </div>
 
         <div class="input-group">
-          <label>EMAIL <span class="required">*</span></label>
-          <input type="email" placeholder="Nhập địa chỉ Email" />
+            <label>EMAIL <span class="required">*</span></label>
+            <input type="email" placeholder="Nhập địa chỉ Email">
         </div>
 
         <div class="input-group">
-          <label>NỘI DUNG <span class="required">*</span></label>
-          <textarea placeholder="Nhập nội dung liên hệ"></textarea>
+            <label>NỘI DUNG <span class="required">*</span></label>
+            <textarea placeholder="Nhập nội dung liên hệ"></textarea>
         </div>
 
         <button class="btn-send">Gửi</button>
-      </section>
-    </main>
+    </section>
+</main>
 
-    <footer class="site-footer">
-      <div class="footer-container">
+<footer>
+    <div class="footer-container">
+
+        <!-- LEFT -->
         <div class="footer-left">
-          <img src="../assets/image/logoFCode.png" alt="CodeWear Logo" />
-          <h3>Code Wear</h3>
-          <p class="copyright">
-            © 2026 <strong>CodeWear</strong>. All rights reserved
-          </p>
+            <img src="../assets/image/logoFCode.png" />
+            <h3>Code Wear</h3>
+            <p class="copyright">
+                © 2026 <strong>CodeWear</strong>. All rights reserved
+            </p>
         </div>
 
+        <!-- CENTER -->
         <div class="footer-center">
-          <div class="address">
-            <img class="icon" src="../assets/image/map.png" alt="Map" />
-            <span>
-              Lô E2a-7, Đường D1, Khu Công nghệ cao (KCNC),<br />
-              P. Long Thạnh Mỹ, TP. Thủ Đức, TP.HCM.
-            </span>
-          </div>
+            <div class="address">
+                <img class="icon" src="../assets/image/map.png" />
+                Lô E2a-7, Đường D1, Khu Công nghệ cao (KCNC),<br />
+                P. Long Thạnh Mỹ, TP. Thủ Đức, TP.HCM.
+            </div>
 
-          <div class="phonenumber">
-            <img class="icon" src="../assets/image/call.png" alt="Phone" />
-            <span>0123456789</span>
-          </div>
+            <div class="phonenumber">
+                <img class="icon" src="../assets/image/call.png" />
+                <span>0123456789</span>
+            </div>
 
-          <div class="email">
-            <img class="icon" src="../assets/image/mail.png" alt="Mail" />
-            <span>codewear@gmail.com</span>
-          </div>
+            <div class="email">
+                <img class="icon" src="../assets/image/mail.png" />
+                <span>codewear@gmail.com</span>
+            </div>
         </div>
 
+        <!-- RIGHT -->
         <div class="footer-right">
-          <a
-            href="https://www.facebook.com/fcodeclub"
-            class="social-item facebook"
-            target="_blank"
-          >
-            <img
-              class="social-icon"
-              src="../assets/image/facebook.png"
-              alt="Facebook"
-            />
-            <span>Facebook</span>
-          </a>
+            <a href="https://www.facebook.com/fcodeclub"
+               class="social-item facebook"
+               target="_blank">
+                <img class="social-icon" src="../assets/image/facebook.png" alt="Facebook" />
+                <span>Facebook</span>
+            </a>
 
-          <a href="#" class="social-item instagram">
-            <img
-              class="social-icon"
-              src="../assets/image/instagram.png"
-              alt="Instagram"
-            />
-            <span>Instagram</span>
-          </a>
+            <a href="#" class="social-item instagram">
+                <img class="social-icon" src="../assets/image/instagram.png" alt="Instagram" />
+                <span>Instagram</span>
+            </a>
 
-          <a href="#" class="social-item youtube">
-            <img
-              class="social-icon"
-              src="../assets/image/youtube.png"
-              alt="Youtube"
-            />
-            <span>Youtube</span>
-          </a>
+            <a href="#" class="social-item youtube">
+                <img class="social-icon" src="../assets/image/youtube.png" alt="Youtube" />
+                <span>Youtube</span>
+            </a>
 
-          <a href="#" class="social-item linkedin">
-            <img
-              class="social-icon"
-              src="../assets/image/linkedln.png"
-              alt="LinkedIn"
-            />
-            <span>LinkedIn</span>
-          </a>
+            <a href="#" class="social-item linkedin">
+                <img class="social-icon" src="../assets/image/linkedln.png" alt="LinkedIn" />
+                <span>LinkedIn</span>
+            </a>
         </div>
-      </div>
+    </div>
 
-        <div class="footer-bottom" style="text-align: right; margin-top: 20px;">
-          <a href="//www.dmca.com/Protection/Status.aspx?ID=7184004d-b4bc-4526-9e2c-b2a7c2009541" title="DMCA.com Protection Status" class="dmca-badge"> 
-              <img src="https://images.dmca.com/Badges/dmca-badge-w100-2x1-03.png?ID=7184004d-b4bc-4526-9e2c-b2a7c2009541" alt="DMCA.com Protection Status" />
-          </a> 
-          <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"></script>
-      </div>
-    </footer>
+    <div class="footer-bottom">
+        <img class="dmca-icon" src="../assets/image/dmca-logo.png" alt="DMCA Protected" />
+    </div>
+</footer>
 
-    <script src="../assets/js/home.js"></script>
-  </body>
+</body>
 </html>
