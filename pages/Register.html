@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register - CodeWear</title>
+    <link rel="stylesheet" href="../assets/css/register.css">
+    
+    <style type="text/css">
+        .form-input input {
+            margin-left: 0px;
+        }
+    </style>
+</head>
+
+<body style="font-family: 'Roboto', sans-serif; background:#f6f8fb;">
+
+<main class="register-wrapper">
+
+    <div class="register-card">
+        <br />
+        <div class="login-logo">
+            <img src="../assets/image/logoFCode.png" alt="CodeWear Logo">
+        </div>
+
+        <h2>Register In CodeWear</h2>
+        <p class="subtitle">Register your account</p>
+
+        <form id="register-form">
+            <div class="form-input">
+                <input type="text" id="fullname" placeholder="Full Name" required>
+            </div>
+
+            <div class="form-input">
+                <input type="email" id="email" placeholder="Email" required>
+            </div>
+
+            <div class="form-input">
+                <input type="password" id="password" placeholder="Password" required>
+            </div>
+
+            <div class="form-input">
+                <input type="password" id="re-password" placeholder="Confirm Password" required>
+            </div>
+
+            <br/>
+
+            <button type="submit" id="registerBtn" style="border-radius:50px">
+                REGISTER
+            </button>
+        </form>
+
+        <div class="divider">
+            <span></span>
+            <p>---------------- OR ----------------</p>
+            <span></span>
+        </div>
+
+        <button id="loginBtn" onclick="window.location.href='login.html'" style="border-radius:50px; background: #333; color: #fff;">
+            SIGN IN
+        </button>
+
+        <br />
+        <br />
+
+        <div class="social-icons">
+            <img src="../assets/image/facebook.png" alt="Facebook">
+            <img src="../assets/image/instagram.png" alt="Instagram">
+            <img src="../assets/image/mail.png" alt="Mail">
+            <img src="../assets/image/google.png" alt="Google">
+        </div>
+
+        <p class="footer-tet" style="margin-top: 20px;"> Good space, good service</p>
+
+        <footer class="site-footer" style="margin-top: 20px; font-size: 12px; color: #999;">
+            <p>© 2026 CodeWear. All rights reserved</p>
+        </footer>
+    </div>
+
+</main>
+
+<script src="../assets/js/register.js"></script>
+
+</body>
+</html>
