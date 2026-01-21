@@ -138,4 +138,56 @@ window.handleCheckout = function() {
     localStorage.removeItem('cart'); 
     renderCart();
     updateCartCount();
+<<<<<<< HEAD
+}
+
+
+// ========================================================================
+
+const checkoutBtn = document.querySelector('.checkout-btn'); // Nút Thanh toán
+
+if (checkoutBtn) {
+    checkoutBtn.addEventListener('click', () => {
+        // 1. Kiểm tra đăng nhập
+        const user = JSON.parse(localStorage.getItem('user'));
+        if (!user) {
+            alert("Bạn cần đăng nhập để thanh toán!");
+            window.location.href = "login.html";
+            return;
+        }
+
+        // 2. Lấy thông tin giỏ hàng
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        if (cart.length === 0) {
+            alert("Giỏ hàng đang trống!");
+            return;
+        }
+
+        // 3. Tính tổng tiền
+        const totalPrice = cart.reduce((total, item) => total + Number(item.price * item.quantity), 0);
+
+        // 4. TẠO ĐƠN HÀNG MỚI (Lưu cục bộ)
+        const newOrder = {
+            id: 'ORD' + Date.now().toString().slice(-6), // Tạo mã đơn ngẫu nhiên (VD: ORD123456)
+            date: new Date().toLocaleDateString('vi-VN'), // Ngày hiện tại
+            total: totalPrice,
+            status: "Đang xử lý",
+            items: cart // Lưu danh sách món đã mua
+        };
+
+        // 5. Lưu vào LocalStorage (Theo key riêng của từng User để không bị lẫn)
+        // Key sẽ có dạng: "orders_ID_CUA_USER"
+        const userOrderKey = `orders_${user.id}`; 
+        const currentOrders = JSON.parse(localStorage.getItem(userOrderKey)) || [];
+        
+        currentOrders.unshift(newOrder); // Thêm đơn mới vào đầu danh sách
+        localStorage.setItem(userOrderKey, JSON.stringify(currentOrders));
+
+        // 6. Xử lý sau khi mua
+        alert("Đặt hàng thành công! Cảm ơn bạn.");
+        localStorage.removeItem('cart'); // Xóa giỏ hàng
+        window.location.href = "order-history.html"; // Chuyển sang trang lịch sử
+    });
+=======
+>>>>>>> 412153e7ee6a94b1b2ab610f12f6b7a56ae885a3
 }
