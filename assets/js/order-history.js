@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-<<<<<<< HEAD
     // 1. KIỂM TRA LOGIN (Bảo vệ trang)
     // Nếu chưa đăng nhập thì đuổi về trang login ngay
     const user = JSON.parse(localStorage.getItem('user'));
@@ -54,23 +53,3 @@ document.addEventListener("DOMContentLoaded", () => {
         tableBody.innerHTML += row;
     });
 });
-=======
-  // Nút mua lại
-  const buyAgainBtns = document.querySelectorAll(".btn-danger");
-
-  buyAgainBtns.forEach(btn => {
-    btn.addEventListener("click", () => {
-      alert("Đã thêm sản phẩm vào giỏ hàng!");
-    });
-  });
-
-  // Nút hoàn tiền
-  const refundBtns = document.querySelectorAll(".btn-outline");
-
-  refundBtns.forEach(btn => {
-    btn.addEventListener("click", () => {
-      alert("Yêu cầu hoàn tiền đã được gửi!");
-    });
-  });
-});
->>>>>>> 412153e7ee6a94b1b2ab610f12f6b7a56ae885a3

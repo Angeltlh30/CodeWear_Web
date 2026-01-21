@@ -1,11 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
-<<<<<<< HEAD
 const authRoutes = require('./routes/auth.routes');
-=======
-const authRoutes = require('./routes/auth');
->>>>>>> 412153e7ee6a94b1b2ab610f12f6b7a56ae885a3
 
 const app = express();
 const PORT = 3000;
