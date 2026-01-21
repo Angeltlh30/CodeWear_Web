@@ -1,5 +1,6 @@
 const loginBtn = document.getElementById("loginBtn");
 const emailInput = document.getElementById("emailInput");
+<<<<<<< HEAD
 const passwordInput = document.getElementById("passwordInput");
 
 if (loginBtn) {
@@ -49,3 +50,26 @@ if (loginBtn) {
         }
     });
 }
+=======
+
+loginBtn.addEventListener("click", function () {
+  const email = emailInput.value.trim();
+
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if (!email) {
+    alert("Vui lòng nhập email");
+    return;
+  }
+
+  if (!emailRegex.test(email)) {
+    alert("Email không đúng định dạng");
+    return;
+  }
+
+  localStorage.setItem("isLoggedIn", "true");
+  localStorage.setItem("userEmail", email);
+
+  window.location.href = "../index.html";
+});
+>>>>>>> 412153e7ee6a94b1b2ab610f12f6b7a56ae885a3

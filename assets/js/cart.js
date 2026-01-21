@@ -138,6 +138,7 @@ window.handleCheckout = function() {
     localStorage.removeItem('cart'); 
     renderCart();
     updateCartCount();
+<<<<<<< HEAD
 }
 
 
@@ -187,4 +188,6 @@ if (checkoutBtn) {
         localStorage.removeItem('cart'); // Xóa giỏ hàng
         window.location.href = "order-history.html"; // Chuyển sang trang lịch sử
     });
+=======
+>>>>>>> 412153e7ee6a94b1b2ab610f12f6b7a56ae885a3
 }
