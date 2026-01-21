@@ -17,7 +17,7 @@ mongoose.connect(MONGO_URI)
     .then(() => console.log('✅ Đã kết nối MongoDB'))
     .catch(err => console.error('❌ Lỗi DB:', err));
 
-// Routes.
+// Routes
 app.use('/api/auth', authRoutes);
 
 app.listen(PORT, () => {
