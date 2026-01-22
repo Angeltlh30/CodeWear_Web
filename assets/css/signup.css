@@ -138,24 +138,35 @@ body {
         color: #9ca3af;
     }
     /*social icon*/
-.social-icons {
+.social-container {
     display: flex;
-    justify-content: center; 
-    align-items: center;
-    gap: 70px;
+    gap: 15px; 
+    justify-content: center;
+    padding: 20px;
 }
 
-    .social-icons img {
-        width: 42px;
-        height: auto;
-        cursor: pointer;
-        margin-right: 30px;
+.social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f2f5; 
+    border: none;
+    border-radius: 50px; 
+    width: 150px; 
+    height: 45px; 
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+    .social-btn:hover {
+        background-color: #e4e6eb;
     }
 
-        .social-icons img:hover {
-            transform: scale(1.1);
-            transition: 0.2s;
-        }
+    .social-btn img {
+        width: 24px;
+        height: 24px;
+        object-fit: contain;
+    }
 
 .footer-tet {
     color: #8b95a5;
