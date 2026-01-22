@@ -24,7 +24,7 @@ app.get('/ping', (req, res) => {
     res.status(200).send('Pong! Server is alive.');
 });
 
-// Sử dụng Routes
+// Sử dụng Routes.
 app.use('/api/auth', authRoutes);
 app.use('/api/products', productRoutes);
 app.use('/api/orders', orderRoutes);
