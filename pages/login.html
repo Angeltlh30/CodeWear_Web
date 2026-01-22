@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <title>Login - CodeWear</title>
 
+    <!-- CSS -->
     <link rel="stylesheet" href="../assets/css/base.css" />
     <link rel="stylesheet" href="../assets/css/layout.css" />
     <link rel="stylesheet" href="../assets/css/auth.css" />
@@ -14,13 +15,16 @@
     <main class="login-wrapper">
         <div class="login-card">
 
+            <!-- Logo -->
             <div class="login-logo">
                 <img src="../assets/image/logoFCode.png" alt="CodeWear Logo" />
             </div>
 
+            <!-- Title -->
             <h2>Sign In CodeWear</h2>
             <p class="subtitle">Access your account</p>
 
+            <!-- Login form -->
             <form id="login-form">
                 <input
                     type="email"
@@ -28,12 +32,14 @@
                     placeholder="Email"
                     required
                 />
+
                 <input
                     type="password"
                     id="passwordInput"
                     placeholder="Password"
                     required
                 />
+
                 <button
                     type="submit"
                     id="loginBtn"
@@ -43,8 +49,15 @@
                 </button>
             </form>
 
-            <div style="margin-top: 25px; margin-bottom: 20px;">
-                <p style="font-size: 14px; color: #8b95a5; margin-bottom: 10px;"></p>
+            <!-- OR divider -->
+            <div class="divider">
+                <span></span>
+                <p>OR</p>
+                <span></span>
+            </div>
+
+            <!-- Sign up -->
+            <div class="signup-wrapper">
                 <button
                     onclick="window.location.href='Register.html'"
                     class="btn-register"
@@ -53,20 +66,15 @@
                 </button>
             </div>
 
-            <div class="divider">
-                <span></span>
-                <p>OR</p>
-                <span></span>
-            </div>
-
+            <!-- Social login -->
             <div class="social-login">
                 <button class="social-btn">
-                    <img src="../assets/image/facebook.png" />
+                    <img src="../assets/image/facebook.png" alt="Facebook" />
                     <span>Continue with Facebook</span>
                 </button>
 
                 <button class="social-btn">
-                    <img src="../assets/image/google.png" />
+                    <img src="../assets/image/google.png" alt="Google" />
                     <span>Continue with Google</span>
                 </button>
             </div>
@@ -76,12 +84,13 @@
         </div>
     </main>
 
+    <!-- Footer -->
     <footer>
         <div class="footer-container">
 
             <!-- LEFT -->
             <div class="footer-left">
-                <img src="../assets/image/logoFCode.png" />
+                <img src="../assets/image/logoFCode.png" alt="CodeWear" />
                 <h3>Code Wear</h3>
                 <p class="copyright">
                     © 2026 <strong>CodeWear</strong>. All rights reserved
@@ -160,7 +169,7 @@
             />
         </div>
     </footer>
-
+    
     <script src="../assets/js/login.js"></script>
 
     <script>
