@@ -14,9 +14,6 @@ Dự án mô phỏng một **hệ thống thương mại điện tử cơ bản*
 - Quản lý mã nguồn với Git & GitHub
 - Làm việc nhóm theo mô hình phân vai
 
-🔗 **DEMO Frontend**:
-[https://angeltlh30.github.io/CodeWear_Web/](https://angeltlh30.github.io/CodeWear_Web/)
-
 ---
 
 ## 🎯 Mục tiêu dự án
