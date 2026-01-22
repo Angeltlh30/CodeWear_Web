@@ -1,0 +1,12 @@
+{
+  "name": "codewear_web",
+  "version": "1.0.0",
+  "description": "**CodeWear by F-Code** là một dự án website bán áo thun và phụ kiện mang phong cách **code & công nghệ**, được xây dựng nhằm phục vụ **chiến dịch pre-order gây quỹ cho CLB**.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

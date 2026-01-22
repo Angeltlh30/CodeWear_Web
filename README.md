@@ -1,49 +1,63 @@
-#  CodeWear by F-Code – Tech-Themed Clothing Pre-order Website
+# 👕 CodeWear by F-Code
 
-## Giới thiệu
+### Tech-Themed Clothing Pre-order Website (Frontend + Backend)
 
-**CodeWear by F-Code** là một dự án website bán áo thun và phụ kiện mang phong cách **code & công nghệ**, được xây dựng nhằm phục vụ **chiến dịch pre-order gây quỹ cho CLB**.
+## 📌 Giới thiệu
 
-Dự án mô phỏng một website thương mại điện tử cơ bản, tập trung vào:
+**CodeWear by F-Code** là dự án website bán áo thun và phụ kiện mang phong cách **Code & Công nghệ**, được xây dựng nhằm phục vụ **chiến dịch pre-order gây quỹ cho CLB F-Code**.
 
-* Trải nghiệm người dùng (UI/UX)
-* Quy trình thiết kế → prototype → code
-* Làm việc nhóm với Git & GitHub
-* Triển khai website thực tế (deploy)
+Dự án mô phỏng một **hệ thống thương mại điện tử cơ bản**, bao gồm cả **Frontend** và **Backend**, giúp sinh viên thực hành:
 
-**DEMO** : https://angeltlh30.github.io/CodeWear_Web/
----
-
-##  Mục tiêu dự án
-
-* Xây dựng website giới thiệu & bán sản phẩm CodeWear
-* Minh họa quy trình thiết kế sản phẩm số (Figma → Code)
-* Thực hành frontend web (HTML/CSS/JavaScript)
-* Gây quỹ cho CLB thông qua hình thức **pre-order**
-* Làm việc nhóm theo mô hình phân vai rõ ràng
+- Thiết kế giao diện (UI/UX)
+- Xây dựng website bằng HTML/CSS/JavaScript
+- Kết nối frontend – backend
+- Quản lý mã nguồn với Git & GitHub
+- Làm việc nhóm theo mô hình phân vai
 
 ---
 
-##  Concept sản phẩm
+## 🎯 Mục tiêu dự án
 
-* **Áo thun code design** (Debug, Git, Developer quotes,…)
-* **Accessories tech-themed** (notebook, sticker, phụ kiện IT)
-  
----
-
-##  Công nghệ sử dụng
-
-* **Figma**: thiết kế UI, design system, prototype
-* **HTML**
-* **CSS**
-* **JavaScript**
-* **MockAPI**: giả lập dữ liệu sản phẩm
-* **localStorage**: lưu giỏ hàng
-* **Deploy**
+- Xây dựng website giới thiệu & bán sản phẩm CodeWear
+- Minh họa quy trình: **Thiết kế → Lập trình → Mở rộng Backend**
+- Thực hành phát triển **Frontend Web**
+- Làm quen với **Backend NodeJS + MongoDB**
+- Phục vụ chiến dịch **pre-order gây quỹ cho CLB**
 
 ---
 
-## 📂 Project Structure
+## 🎨 Concept sản phẩm
+
+- **Áo thun – Hoodie** chủ đề lập trình (Code, Git, Debug, Developer quotes)
+- **Phụ kiện công nghệ**: sổ tay, lót chuột, móc khóa, túi tote
+- Phong cách tối giản – hiện đại – hướng tới sinh viên IT
+
+---
+
+## 🛠️ Công nghệ sử dụng
+
+### 🔹 Frontend
+
+- **HTML5**
+- **CSS3**
+- **JavaScript (Vanilla JS)**
+- **localStorage** (lưu giỏ hàng phía client)
+- **GitHub Pages** (deploy frontend)
+
+### 🔹 Backend
+
+- **NodeJS**
+- **ExpressJS**
+- **MongoDB**
+- **Mongoose**
+- **dotenv**
+- **nodemon**
+
+> Backend hiện tập trung xử lý **đăng ký / đăng nhập người dùng** và lưu trữ dữ liệu vào database.
+
+---
+
+## 📂 Cấu trúc dự án
 
 ```text
 CodeWear_Web/
@@ -53,10 +67,12 @@ CodeWear_Web/
 ├── pages/
 │   ├── products.html
 │   ├── product-detail.html
-│   ├── about.html
 │   ├── cart.html
+│   ├── order-history.html
+│   ├── about.html
 │   ├── contact.html
-│   └── login.html
+│   ├── login.html
+│   └── signup.html
 │
 ├── assets/
 │   ├── css/
@@ -64,86 +80,121 @@ CodeWear_Web/
 │   │   ├── layout.css
 │   │   ├── home.css
 │   │   ├── products.css
+│   │   ├── product-detail.css
 │   │   ├── cart.css
-│   │   └── auth.css
+│   │   ├── order-history.css
+│   │   ├── auth.css
+│   │   └── contact.css
 │   │
 │   ├── js/
-│   │   ├── api/
-│   │   ├── storage/
+│   │   ├── api/              # Gọi API (MockAPI / Backend)
+│   │   ├── storage/          # localStorage (cart, user)
+│   │   │   └── localStorage.js
+│   │   │
 │   │   ├── home.js
 │   │   ├── products.js
 │   │   ├── product-detail.js
 │   │   ├── cart.js
-│   │   └── login.js
+│   │   ├── order-history.js
+│   │   ├── login.js
+│   │   └── signup.js
 │   │
-│   └── images/
+│   └── image/
 │
 ├── backend/
-│   ├── config/
-│   ├── controllers/
-│   ├── models/
-│   ├── routes/
-│   ├── server.js
-│   └── package.json
+│   ├── node_modules/
+│   ├── src/
+│   │   ├── controllers/
+│   │   │   └── auth.controllers.js
+│   │   ├── models/
+│   │   │   └── user.model.js
+│   │   └── routes/
+│   │       └── index.js
+│   │
+│   ├── .env
+│   ├── nodemon.json
+│   ├── package.json
+│   └── package-lock.json
 │
 ├── .gitignore
 └── README.md
-
 ```
 
-##  Chức năng chính
+---
 
-* Trang chủ giới thiệu thương hiệu CodeWear
-* Danh sách sản phẩm (fetch từ MockAPI)
-* Chi tiết sản phẩm theo `productId`
-* Giỏ hàng:
+## ⚙️ Chức năng chính
 
-  * Thêm / xoá sản phẩm
-  * Cập nhật số lượng
-  * Tính tổng tiền
-  * Lưu bằng localStorage
-* Trang liên hệ với form validate cơ bản
-* Trang giới thiệu
-* Animation cơ bản (hover, transition)
+### 🔹 Frontend
+
+- Trang chủ giới thiệu thương hiệu CodeWear
+- Danh sách sản phẩm (fetch từ MockAPI)
+- Trang chi tiết sản phẩm theo `productId`
+- Giỏ hàng:
+  - Thêm / xoá sản phẩm
+  - Cập nhật số lượng
+  - Tính tổng tiền
+  - Lưu bằng `localStorage`
+
+- Trang lịch sử đơn hàng (demo UI)
+- Trang đăng nhập / đăng ký
+- Hiệu ứng hover, transition, responsive cơ bản
+
+### 🔹 Backend
+
+- API đăng ký người dùng
+- API đăng nhập người dùng
+- Lưu trữ dữ liệu người dùng bằng MongoDB
+- Cấu trúc MVC (Model – Controller – Route)
 
 ---
-##  Cách chạy project
 
-1. Clone repository:
+## ▶️ Cách chạy dự án
+
+### 1️⃣ Chạy Frontend
 
 ```bash
-git clone <repo-url>
+Mở file index.html bằng trình duyệt
 ```
 
-2. Mở file `index.html` bằng trình duyệt (Chrome/Edge)
-
-Vì dùng MockAPI nên cần **kết nối Internet** để fetch dữ liệu.
+> Frontend sử dụng MockAPI → cần kết nối Internet
 
 ---
 
-##  Lưu ý
+### 2️⃣ Chạy Backend
 
-* Đây là dự án học tập & gây quỹ
-* Không có thanh toán thật
-* Không có backend xử lý đơn hàng
-* MockAPI chỉ dùng cho demo
+```bash
+cd backend
+npm install
+npm run dev
+```
 
----
-
-##  Tổng kết
-
-**CodeWear by F-Code** là dự án website frontend mô phỏng một hệ thống bán hàng đơn giản, giúp thành viên CLB:
-
-* Rèn luyện kỹ năng thiết kế UI/UX
-* Thực hành frontend web
-* Làm việc nhóm với Git/GitHub
-* Trải nghiệm quy trình làm sản phẩm thực tế
-
-Dự án phục vụ cho **chiến dịch pre-order gây quỹ CLB**, đồng thời là sản phẩm demo để học tập và thuyết trình.
+> Đảm bảo đã cấu hình file `.env` để kết nối MongoDB
 
 ---
 
-*Cảm ơn các bạn đã theo dõi và ủng hộ CodeWear by F-Code!*
+## ⚠️ Lưu ý
+
+- Đây là **dự án học tập & gây quỹ**
+- Không có thanh toán online thật
+- Backend chưa xử lý đặt hàng & thanh toán
+- MockAPI chỉ dùng để demo dữ liệu sản phẩm
 
 ---
 
+## 📌 Tổng kết
+
+**CodeWear by F-Code** là dự án mô phỏng website thương mại điện tử, giúp sinh viên:
+
+- Rèn luyện kỹ năng **Frontend Web**
+- Làm quen với **Backend NodeJS**
+- Hiểu cách kết nối frontend – backend
+- Thực hành làm việc nhóm với Git/GitHub
+- Trải nghiệm quy trình phát triển sản phẩm thực tế
+
+Dự án phục vụ cho **chiến dịch pre-order gây quỹ CLB F-Code**, đồng thời là **sản phẩm demo cho học tập và thuyết trình**.
+
+---
+
+✨ _Cảm ơn bạn đã quan tâm và ủng hộ CodeWear by F-Code!_
+
+---

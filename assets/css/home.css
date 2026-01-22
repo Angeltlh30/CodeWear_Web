@@ -217,8 +217,10 @@ nav li a.active {
 
 /* Sản phẩm nổi bật */
 .product {
-  background-color: #5e6979;
+  margin-top: 50px;
+  background-color: #9299a5;
   padding: 60px 0;
+  margin-bottom: 80px;
 }
 
 .bg-product {
@@ -309,6 +311,7 @@ nav li a.active {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 100px;
 }
 
 .about-container {
