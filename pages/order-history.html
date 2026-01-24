@@ -2,122 +2,128 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <title>Lịch sử đơn hàng - CodeWear (Copy)</title>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lịch sử đơn hàng - CodeWear</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="../assets/css/products.css" />
   <link rel="stylesheet" href="../assets/css/base.css">
   <link rel="stylesheet" href="../assets/css/layout.css">
   <link rel="stylesheet" href="../assets/css/order-history.css">
 </head>
 
-<body style="font-family: 'Roboto', sans-serif; background:#f6f8fb;">
+<body style="font-family: 'Roboto', sans-serif; background:#f5f5f5;">
 
-<header class="site-header">
-  <div class="header-container">
-
-    <div class="logo">
-      <img src="../assets/image/logoFCode.png">
-      <span>CodeWear</span>
-    </div>
-
-    <div class="search-box">
-  <input type="text" placeholder="Tìm kiếm">
-</div>
-
-    <div class="header-icons">
+  <header class="site-header">
+    <div class="header-container">
+      <div class="logo">
+        <a href="../index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 10px;">
+            <img src="../assets/image/logoFCode.png" alt="CodeWear">
+            <span>CodeWear</span>
+        </a>
+      </div>
+      <div class="search-box">
+         <input type="text" placeholder="Tìm kiếm sản phẩm...">
+         <button><img src="../assets/image/search.png" alt="Search"></button>
+      </div>
+      <div class="header-icons">
           <a href="cart.html" style="position: relative;">
-            <img src="../assets/image/shopping-cart.png" />
-            <span id="cart-count"></span>
+            <img src="../assets/image/shopping-cart.png" alt="Giỏ hàng"/>
+            <span id="cart-count">0</span>
           </a>
           <a href="./order-history.html">
-  <img src="../assets/image/user.png" width="28" height="28">
+             <img src="../assets/image/user.png" width="28" height="28" alt="Tài khoản">
           </a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="../index.html">TRANG CHỦ</a></li>
+          <li><a href="products.html">SẢN PHẨM</a></li>
+          <li><a href="about.html">VỀ CHÚNG TÔI</a></li>
+          <li><a href="contact.html">LIÊN HỆ</a></li>
+        </ul>
+      </nav>
     </div>
+  </header>
 
-    <nav>
-      <ul>
-        <li><a href="../index.html" class="active">TẤT CẢ</a></li>
-        <li><a href="products.html">ĐANG GIAO</a></li>
-        <li><a href="about.html">ĐÃ GIAO</a></li>
-        <li><a href="contact.html">ĐÃ HỦY</a></li>
-      </ul>
-    </nav>
-
-  </div>
-</header>
-
-<div class="table-container">
-    <table>
-        <thead>
-            <tr>
-                <th>Mã đơn</th>
-                <th>Ngày đặt</th>
-                <th>Sản phẩm</th>
-                <th>Tổng tiền</th>
-                <th>Trạng thái</th>
-            </tr>
-        </thead>
+  <div class="order-history-wrapper">
+    <div class="container">
         
-        <tbody>
-            </tbody>
-    </table>
-</div>
+        <main class="content-area">
+            <div class="tabs">
+                <button class="tab-item active">Tất cả</button>
+                <button class="tab-item">Đang giao</button>
+                <button class="tab-item">Đã giao</button>
+                <button class="tab-item">Đã hủy</button>
+            </div>
 
-<footer>
-  <div class="footer-container">
-
-    <div class="footer-left">
-      <img src="../assets/image/logoFCode.png" />
-      <h3>Code Wear</h3>
-      <p class="copyright">
-        © 2026 <strong>CodeWear</strong>. All rights reserved
-      </p>
+            <div id="order-list-container">
+                <div style="text-align: center; padding: 60px; background: #fff; border-radius: 4px;">
+                    <i class="fas fa-spinner fa-spin fa-2x" style="color: #ee4d2d;"></i>
+                    <p style="margin-top: 15px; color: #666;">Đang tải đơn hàng...</p>
+                </div>
+            </div>
+        </main>
+        
     </div>
-
-    <div class="footer-center">
-      <div class="address">
-        <img class="icon" src="../assets/image/map.png" />
-        Lô E2a-7, Đường D1, Khu Công nghệ cao (KCNC),<br />
-        P. Long Thạnh Mỹ, TP. Thủ Đức, TP.HCM.
-      </div>
-
-      <div class="phonenumber">
-        <img class="icon" src="../assets/image/call.png" />
-        <span>0123456789</span>
-      </div>
-
-      <div class="email">
-        <img class="icon" src="../assets/image/mail.png" />
-        <span>codewear@gmail.com</span>
-      </div>
-    </div>
-
-    <div class="footer-right">
-      <a href="#" class="social-item facebook">
-        <img class="social-icon" src="../assets/image/facebook.png" />
-        <span>Facebook</span>
-      </a>
-      <a href="#" class="social-item instagram">
-        <img class="social-icon" src="../assets/image/instagram.png" />
-        <span>Instagram</span>
-      </a>
-      <a href="#" class="social-item youtube">
-        <img class="social-icon" src="../assets/image/youtube.png" />
-        <span>Youtube</span>
-      </a>
-      <a href="#" class="social-item linkedin">
-        <img class="social-icon" src="../assets/image/linkedln.png" />
-        <span>LinkedIn</span>
-      </a>
-    </div>
-
   </div>
 
-  <div class="footer-bottom">
-    <img class="dmca-icon" src="../assets/image/dmca-logo.png" />
-  </div>
-</footer>
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <div class="logo">
+          <img src="../assets/image/logoFCode.png" alt="CodeWear" />
+          <span>CodeWear</span>
+        </div>
+        <p class="copyright">
+          © 2026 CodeWear. All rights reserved
+        </p>
+      </div>
 
+      <div class="footer-center">
+        <div class="address">
+          <img class="icon" src="../assets/image/map.png" />
+          Lô E2a-7, Đường D1, Khu Công nghệ cao (KCNC),<br />
+          P. Long Thạnh Mỹ, TP. Thủ Đức, TP.HCM.
+        </div>
+
+        <div class="phonenumber">
+          <img class="icon" src="../assets/image/call.png" />
+          <span>0123456789</span>
+        </div>
+
+        <div class="email">
+          <img class="icon" src="../assets/image/mail.png" />
+          <span>codewear@gmail.com</span>
+        </div>
+      </div>
+
+      <div class="footer-right">
+        <a href="#" class="social-item facebook">
+          <img class="social-icon" src="../assets/image/facebook.png" />
+          <span>Facebook</span>
+        </a>
+        <a href="#" class="social-item instagram">
+          <img class="social-icon" src="../assets/image/instagram.png" />
+          <span>Instagram</span>
+        </a>
+        <a href="#" class="social-item youtube">
+          <img class="social-icon" src="../assets/image/youtube.png" />
+          <span>Youtube</span>
+        </a>
+        <a href="#" class="social-item linkedin">
+          <img class="social-icon" src="../assets/image/linkedln.png" />
+          <span>LinkedIn</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <img class="dmca-icon" src="../assets/image/dmca-logo.png" alt="DMCA Protected" />
+    </div>
+  </footer>
+
+  <script src="../assets/js/order-history.js"></script>
 </body>
 </html>
-
-<script src="../assets/js/order-history.js"></script>

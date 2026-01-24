@@ -1,5 +1,5 @@
 /* =======================================================
-   TRANG SẢN PHẨM - LOGIC HIỂN THỊ & MUA HÀNG
+   TRANG SẢN PHẨM - LOGIC HIỂN THỊ & MUA HÀNG (MONGODB)
    ======================================================= */
 
 const productGrid = document.querySelector('.product-grid');
@@ -24,19 +24,20 @@ const displayOrder = ["4", "5", "7", "1", "2", "3", "15", "9", "8", "14", "6", "
 
 // --- 1. KHỞI TẠO TRANG ---
 async function initProductPage() {
-    // Cập nhật số giỏ hàng trên Header (nếu có hàm này)
+    // Cập nhật số giỏ hàng trên Header
     if (typeof updateCartCount === 'function') updateCartCount();
 
     if (productGrid) {
-        productGrid.innerHTML = '<p style="text-align:center; width:100%; margin-top:20px;">Đang tải dữ liệu...</p>';
+        productGrid.innerHTML = '<p style="text-align:center; width:100%; margin-top:20px;">Đang tải dữ liệu từ Server...</p>';
     }
 
     try {
-        // Lấy data từ MockAPI 
-        const data = await MockAPI.getAllProducts();
+        // === THAY ĐỔI: GỌI API MONGODB ===
+        const response = await fetch('http://localhost:3000/api/products');
+        const data = await response.json();
 
         if (data && data.length > 0) {
-            // Sắp xếp sản phẩm theo ý muốn
+            // Sắp xếp sản phẩm theo ý muốn (Giữ nguyên logic của bạn)
             const sortedData = data.sort((a, b) => {
                 const idxA = displayOrder.indexOf(a.id);
                 const idxB = displayOrder.indexOf(b.id);
@@ -49,7 +50,7 @@ async function initProductPage() {
         }
     } catch (error) {
         console.error("Lỗi:", error);
-        productGrid.innerHTML = '<p style="text-align:center; color:red;">Lỗi kết nối dữ liệu!</p>';
+        productGrid.innerHTML = '<p style="text-align:center; color:red;">Lỗi kết nối Server Backend! (Hãy kiểm tra lại node src/index.js)</p>';
     }
 }
 
@@ -61,7 +62,14 @@ function renderProducts(products) {
     products.forEach(product => {
         // Format giá tiền
         let formattedPrice = parseInt(product.price).toLocaleString('vi-VN');
-        const imageSrc = product.image ? product.image : '../assets/image/thun1.png';
+        
+        // === THAY ĐỔI: FIX ĐƯỜNG DẪN ẢNH ===
+        // Vì file này chạy ở /pages/products.html nên ảnh cần có ../ đằng trước
+        let imageSrc = product.image;
+        if(imageSrc && !imageSrc.startsWith('../') && !imageSrc.startsWith('http')) {
+            imageSrc = '../' + imageSrc;
+        }
+        
         const detailLink = `product-detail.html?id=${product.id}`;
 
         // Tạo id để cuộn trang (Anchor)
@@ -79,7 +87,7 @@ function renderProducts(products) {
                     <p class="price">${formattedPrice}đ</p>
                     
                     <button class="add-to-cart" 
-                        onclick="handleAddToCart('${product.id}', '${product.name}', ${product.price}, '${imageSrc}')">
+                        onclick="addToCartLocal('${product.id}', '${product.name}', ${product.price}, '${imageSrc}')">
                         Thêm vào giỏ hàng
                     </button>
                 </div>
@@ -89,41 +97,50 @@ function renderProducts(products) {
     });
 }
 
-// --- 3. XỬ LÝ SỰ KIỆN MUA HÀNG ---
-window.handleAddToCart = (id, name, price, image) => {
+// --- 3. XỬ LÝ SỰ KIỆN MUA HÀNG (LƯU LOCALSTORAGE) ---
+// Đổi tên hàm thành addToCartLocal để đồng bộ với các file khác
+window.addToCartLocal = (id, name, price, image) => {
     
     // BƯỚC 1: KIỂM TRA ĐĂNG NHẬP
-    // Lấy thông tin user từ bộ nhớ trình duyệt
     const user = JSON.parse(localStorage.getItem('user'));
 
     if (!user) {
-        // Nếu chưa đăng nhập -> Thông báo và hỏi chuyển trang
         if(confirm("Bạn cần đăng nhập để mua hàng. Đến trang đăng nhập ngay?")) {
             window.location.href = "login.html"; 
         }
-        return; // Dừng lại, không thêm vào giỏ
+        return;
     }
 
-    // BƯỚC 2: THỰC HIỆN THÊM VÀO GIỎ
-    // Kiểm tra xem hàm addToCart (trong home.js) có tồn tại không
-    if (typeof addToCart === 'function') {
-        // Gọi hàm bên home.js để xử lý logic lưu vào localStorage
-        addToCart(name, price, image); 
+    // BƯỚC 2: THỰC HIỆN THÊM VÀO GIỎ (LocalStorage)
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    
+    // Kiểm tra trùng sản phẩm (Dựa theo ID)
+    let existingItem = cart.find(item => item.id === id);
+    
+    if (existingItem) {
+        existingItem.quantity += 1;
     } else {
-        // Fallback nếu không tìm thấy file home.js
-        console.warn("Không tìm thấy hàm addToCart, đang xử lý thủ công...");
-        let cart = JSON.parse(localStorage.getItem('cart')) || [];
-        let existingItem = cart.find(item => item.name === name);
-        if (existingItem) {
-            existingItem.quantity += 1;
-        } else {
-            cart.push({ name, price, image, quantity: 1 });
-        }
-        localStorage.setItem('cart', JSON.stringify(cart));
-        alert(`Đã thêm "${name}" vào giỏ hàng!`);
-        if(typeof updateCartCount === 'function') updateCartCount();
+        cart.push({ id, name, price, image, quantity: 1 });
     }
+    
+    // Lưu lại
+    localStorage.setItem('cart', JSON.stringify(cart));
+    
+    // Thông báo & Cập nhật icon
+    alert(`Đã thêm "${name}" vào giỏ hàng!`);
+    if(typeof updateCartCount === 'function') updateCartCount();
 };
+
+// Hàm cập nhật icon giỏ hàng (Để file này chạy độc lập được)
+function updateCartCount() {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const count = cart.reduce((sum, item) => sum + item.quantity, 0);
+    const badge = document.getElementById('cart-count');
+    if (badge) {
+        badge.innerText = count;
+        badge.style.display = count > 0 ? 'block' : 'none';
+    }
+}
 
 // Chạy khởi tạo khi trang tải xong
 document.addEventListener('DOMContentLoaded', initProductPage);
