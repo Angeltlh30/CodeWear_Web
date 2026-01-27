@@ -87,8 +87,8 @@ CodeWear_Web/
 │   │   └── contact.css
 │   │
 │   ├── js/
-│   │   ├── api/              # Gọi API (MockAPI / Backend)
-│   │   ├── storage/          # localStorage (cart, user)
+│   │   ├── api/
+│   │   ├── storage/
 │   │   │   └── localStorage.js
 │   │   │
 │   │   ├── home.js
@@ -105,13 +105,24 @@ CodeWear_Web/
 │   ├── node_modules/
 │   ├── src/
 │   │   ├── controllers/
-│   │   │   └── auth.controllers.js
+│   │   │   ├── auth.controllers.js
+│   │   │   ├── order.controllers.js
+│   │   │   └── product.controllers.js
+│   │   │
 │   │   ├── models/
-│   │   │   └── user.model.js
-│   │   └── routes/
-│   │       └── index.js
+│   │   │   ├── user.model.js
+│   │   │   ├── order.model.js
+│   │   │   └── product.model.js
+│   │   │
+│   │   ├── routes/
+│   │   │   ├── auth.routes.js
+│   │   │   ├── order.routes.js
+│   │   │   └── product.routes.js
+│   │   │
+│   │   └── index.js
 │   │
 │   ├── .env
+│   ├── .env.example
 │   ├── nodemon.json
 │   ├── package.json
 │   └── package-lock.json
