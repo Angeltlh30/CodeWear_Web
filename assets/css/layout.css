@@ -1,7 +1,6 @@
 /* =========================================
    RESET & GLOBAL
    ========================================= */
-<<<<<<< HEAD
 * {
   margin: 0;
   padding: 0;
@@ -16,34 +15,21 @@ body {
   margin: 40px auto;
   padding: 0 20px;
 }
-=======
-* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Roboto', sans-serif; }
-body { background: #fff; }
-.container { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
->>>>>>> fa183bd03f28c9c097b259360dc7fc8274d118a6
 
 /* =========================================
    WRAPPER CHÍNH
    ========================================= */
 .product-detail-wrapper {
-<<<<<<< HEAD
   background: #fff;
   padding: 30px;
-  display: block;
+  display: block; /* Để chứa 2 tầng (trên/dưới) */
   margin-bottom: 80px;
-=======
-    background: #fff;
-    padding: 30px;
-    display: block; /* Để chứa 2 tầng (trên/dưới) */
-    margin-bottom: 80px;
->>>>>>> fa183bd03f28c9c097b259360dc7fc8274d118a6
 }
 
 /* =========================================
    TẦNG TRÊN: ẢNH VÀ THÔNG TIN
    ========================================= */
 .product-top-section {
-<<<<<<< HEAD
   display: flex;
   gap: 60px;
   align-items: flex-start;
@@ -147,7 +133,7 @@ body { background: #fff; }
   transition: 0.2s;
 }
 
-/* Style đặc biệt cho Áo */
+/* Style đặc biệt cho Áo (Class shirt-mode -> Xanh Lá) */
 .size-btn.shirt-mode:hover {
   background-color: #22c55e;
   color: white;
@@ -205,84 +191,11 @@ body { background: #fff; }
   background: #172554;
   transform: translateY(-2px);
 }
-=======
-    display: flex;
-    gap: 60px;
-    align-items: flex-start;
-}
-
-.images { width: 45%; }
-.info { width: 50%; padding-top: 10px; }
-
-/* --- ẢNH SẢN PHẨM --- */
-.main-img-container {
-    background-color: #000; /* Nền đen */
-    border-radius: 20px;
-    padding: 20px;
-    display: flex; justify-content: center; align-items: center;
-    margin-bottom: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-}
-.main-img { width: 100%; max-height: 450px; object-fit: contain; }
-
-.thumbs { display: flex; gap: 15px; justify-content: center; }
-.thumbs img {
-    width: 80px; height: 80px; object-fit: cover; border-radius: 12px;
-    cursor: pointer; border: 2px solid transparent; background: #f3f4f6;
-    transition: 0.3s;
-}
-.thumbs img:hover { border-color: #000; transform: translateY(-3px); }
-
-/* --- THÔNG TIN TEXT --- */
-.info h1 { font-size: 32px; font-weight: 500; margin-bottom: 10px; text-transform: uppercase; }
-
-.price { margin-bottom: 30px; display: flex; align-items: baseline; gap: 15px; }
-.price .new { color: #ef4444; font-size: 36px; font-weight: bold; }
-.price .old { color: #888; font-size: 18px; text-decoration: line-through; }
-
-/* --- OPTION GROUPS (SIZE/QTY) --- */
-.option-group { margin-bottom: 30px; }
-.option-group p { font-size: 18px; margin-bottom: 15px; color: #333; font-weight: 500;}
-
-/* BUTTON SIZE */
-#size-options { display: flex; gap: 15px; }
-.size-btn {
-    width: 60px; height: 40px; background: #fff; border: 1px solid #e5e7eb; 
-    border-radius: 8px; font-size: 16px; font-weight: 500; cursor: pointer; transition: 0.2s;
-}
-
-/* Style đặc biệt cho Áo (Class shirt-mode -> Xanh Lá) */
-.size-btn.shirt-mode:hover {
-    background-color: #22c55e; 
-    color: white; border-color: #22c55e;
-}
-.size-btn.shirt-mode.active {
-    background-color: #22c55e; 
-    color: white; border-color: #22c55e;
-}
-
-/* SỐ LƯỢNG */
-.quantity-selector { 
-    display: flex; align-items: center; background: #e5e7eb; border-radius: 8px; width: fit-content;
-}
-.qty-btn { width: 50px; height: 45px; background: transparent; border: none; font-size: 20px; cursor: pointer; }
-.qty-input { width: 60px; height: 45px; text-align: center; border: none; background: transparent; font-size: 18px; font-weight: 500; outline: none; }
-
-/* NÚT MUA NGAY */
-.buy-btn {
-    margin-top: 10px; width: 200px; padding: 16px; border-radius: 10px; border: none;
-    background: #1e40af; color: #fff; font-size: 18px; font-weight: 500; 
-    cursor: pointer; transition: 0.3s;
-    box-shadow: 0 4px 15px rgba(30, 64, 175, 0.2);
-}
-.buy-btn:hover { background: #172554; transform: translateY(-2px); }
->>>>>>> fa183bd03f28c9c097b259360dc7fc8274d118a6
 
 /* =========================================
    TẦNG DƯỚI: MÔ TẢ (KÉO THẢ)
    ========================================= */
 .product-bottom-section {
-<<<<<<< HEAD
   margin-top: 60px;
   width: 100%;
 }
@@ -306,19 +219,19 @@ body { background: #fff; }
 /* Card chứa thông tin */
 .info-card {
   /* --- THAY ĐỔI QUAN TRỌNG --- */
-  width: 800px;
-  max-width: 85vw;
-  white-space: normal;
+  width: 800px; /* Đặt chiều rộng cố định (đủ rộng để đọc, đủ hẹp để xuống dòng) */
+  max-width: 85vw; /* Trên điện thoại thì không được vượt quá 85% màn hình */
+  white-space: normal; /* Bắt buộc xuống dòng khi hết chỗ */
 
-  flex: 0 0 auto;
+  flex: 0 0 auto; /* Không cho thẻ co giãn linh tinh */
   background: #f9fafb;
   padding: 25px;
   border-radius: 16px;
   font-size: 15px;
-  line-height: 1.8;
+  line-height: 1.8; /* Tăng khoảng cách dòng lên 1.8 cho dễ đọc */
   color: #4b5563;
   border: 1px solid #eee;
-  text-align: justify;
+  text-align: justify; /* Căn đều 2 bên lề cho đẹp (tùy chọn) */
 }
 .info-card h3 {
   color: #111;
@@ -329,7 +242,7 @@ body { background: #fff; }
   gap: 10px;
 }
 
-/* --- STYLE CHO BẢNG SIZE --- */
+/* --- BỔ SUNG QUAN TRỌNG: STYLE CHO BẢNG SIZE --- */
 .size-table {
   width: 100%;
   border-collapse: collapse;
@@ -345,70 +258,17 @@ body { background: #fff; }
   color: #333;
 }
 .size-table th {
-  background-color: #1e40af;
+  background-color: #1e40af; /* Màu xanh header bảng */
   color: white;
   font-weight: 500;
 }
 .size-table tr:nth-child(even) {
   background-color: #f9fafb;
 }
-=======
-    margin-top: 60px; width: 100%;
-}
-
-.info-scroll-container {
-    display: flex; overflow-x: auto; gap: 20px; padding-bottom: 20px;
-    cursor: grab; user-select: none; 
-    scrollbar-width: none; /* Ẩn scrollbar Firefox */
-}
-.info-scroll-container::-webkit-scrollbar { display: none; /* Ẩn scrollbar Chrome */ }
-.info-scroll-container.active { cursor: grabbing; }
-
-/* Card chứa thông tin */
-.info-card {
-    /* --- THAY ĐỔI QUAN TRỌNG --- */
-    width: 800px;        /* Đặt chiều rộng cố định (đủ rộng để đọc, đủ hẹp để xuống dòng) */
-    max-width: 85vw;     /* Trên điện thoại thì không được vượt quá 85% màn hình */
-    white-space: normal; /* Bắt buộc xuống dòng khi hết chỗ */
-    
-    flex: 0 0 auto;      /* Không cho thẻ co giãn linh tinh */
-    background: #f9fafb; 
-    padding: 25px; 
-    border-radius: 16px;
-    font-size: 15px; 
-    line-height: 1.8;    /* Tăng khoảng cách dòng lên 1.8 cho dễ đọc */
-    color: #4b5563;
-    border: 1px solid #eee;
-    text-align: justify; /* Căn đều 2 bên lề cho đẹp (tùy chọn) */
-}
-.info-card h3 { color: #111; margin-bottom: 15px; font-size: 18px; display: flex; align-items: center; gap: 10px;}
-
-/* --- BỔ SUNG QUAN TRỌNG: STYLE CHO BẢNG SIZE --- */
-.size-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 5px;
-    font-size: 14px;
-    background: #fff;
-}
-.size-table th, .size-table td {
-    border: 1px solid #e5e7eb;
-    padding: 10px;
-    text-align: center;
-    color: #333;
-}
-.size-table th {
-    background-color: #1e40af; /* Màu xanh header bảng */
-    color: white;
-    font-weight: 500;
-}
-.size-table tr:nth-child(even) { background-color: #f9fafb; }
->>>>>>> fa183bd03f28c9c097b259360dc7fc8274d118a6
 
 /* =========================================
    SẢN PHẨM GỢI Ý (RELATED)
    ========================================= */
-<<<<<<< HEAD
 .related-section {
   margin-top: 80px;
   padding-top: 40px;
@@ -451,23 +311,11 @@ body { background: #fff; }
   color: #ef4444;
   font-weight: bold;
 }
-=======
-.related-section { margin-top: 80px; padding-top: 40px; border-top: 1px solid #eee; }
-.related-section h2 { text-align: center; margin-bottom: 40px; font-size: 28px; font-weight: bold; }
-.related-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; }
-
-.product-card { text-align: center; transition: 0.3s; padding: 10px; border-radius: 15px; }
-.product-card:hover { box-shadow: 0 10px 20px rgba(0,0,0,0.05); transform: translateY(-5px); }
-.product-card img { width: 100%; border-radius: 12px; margin-bottom: 15px; }
-.product-card h3 a { color: #111; font-weight: 500; }
-.product-card .price { justify-content: center; font-size: 16px; color: #ef4444; font-weight: bold; }
->>>>>>> fa183bd03f28c9c097b259360dc7fc8274d118a6
 
 /* =========================================
    RESPONSIVE
    ========================================= */
 @media (max-width: 768px) {
-<<<<<<< HEAD
   .product-top-section {
     flex-direction: column;
     gap: 30px;
@@ -483,10 +331,3 @@ body { background: #fff; }
     min-width: 85vw;
   }
 }
-=======
-    .product-top-section { flex-direction: column; gap: 30px; }
-    .images, .info { width: 100%; }
-    .related-grid { grid-template-columns: repeat(2, 1fr); }
-    .info-card { min-width: 85vw; }
-}
->>>>>>> fa183bd03f28c9c097b259360dc7fc8274d118a6
