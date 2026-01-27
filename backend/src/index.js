@@ -1,52 +1,42 @@
-<<<<<<< HEAD
+require('dotenv').config(); // Load biến môi trường từ file .env
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 
 const authRoutes = require('./routes/auth.routes');
 const productRoutes = require('./routes/product.routes');
-const orderRoutes = require('./routes/order.routes'); 
-=======
-const express = require("express");
-const mongoose = require("mongoose");
-const cors = require("cors");
-const authRoutes = require("./routes/auth.routes");
->>>>>>> origin/main
+const orderRoutes = require('./routes/order.routes');
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
-app.use(cors());
+// Cấu hình CORS mở rộng cho mọi nguồn
+app.use(cors({
+    origin: '*',
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization']
+}));
+
 app.use(express.json());
 
-// Kết nối MongoDB
-<<<<<<< HEAD
-const MONGO_URI = 'mongodb+srv://thaihuyxbox_db_user:KfJFl76X6tDM7UnR@cluster0.lxu1hfi.mongodb.net/CodeWear_Web?retryWrites=true&w=majority';
-=======
-const MONGO_URI =
-  "mongodb+srv://thaihuyxbox_db_user:KfJFl76X6tDM7UnR@cluster0.lxu1hfi.mongodb.net/CodeWear_Web?retryWrites=true&w=majority";
->>>>>>> origin/main
+// Kết nối MongoDB 
+const MONGO_URI = process.env.MONGO_URI || 'mongodb://localhost:27017/codewear_local';
 
 mongoose
-  .connect(MONGO_URI)
+  .connect(MONGO_URI, { family: 4 })
   .then(() => console.log("✅ Đã kết nối MongoDB"))
-  .catch((err) => console.error("❌ Lỗi DB:", err));
+  .catch((err) => {
+      console.error("❌ Lỗi DB:", err.message);
+      console.log("👉 Gợi ý: Hãy tạo file .env trong thư mục backend và điền MONGO_URI vào.");
+  });
 
-<<<<<<< HEAD
-// Route kiểm tra sức khỏe Server (Ping)
-app.get('/ping', (req, res) => {
-    res.status(200).send('Pong! Server is alive.');
-});
+app.get('/', (req, res) => res.send('Server CodeWear đang chạy!'));
+app.get('/ping', (req, res) => res.status(200).send('Pong!'));
 
-// Sử dụng Routes.
 app.use('/api/auth', authRoutes);
 app.use('/api/products', productRoutes);
 app.use('/api/orders', orderRoutes);
-=======
-// Routes
-app.use("/api/auth", authRoutes);
->>>>>>> origin/main
 
 app.listen(PORT, () => {
-  console.log(`🚀 Server chạy tại http://localhost:${PORT}`);
+  console.log(`🚀 Server chạy tại cổng: ${PORT}`);
 });

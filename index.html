@@ -29,19 +29,27 @@
         </div>
 
         <div class="header-icons">
-          <a href="./pages/cart.html" style="position: relative">
-            <img src="./assets/image/shopping-cart.png" alt="Cart" />
-            <span id="cart-count">0</span>
-          </a>
+            <a href="./pages/cart.html">
+                <img src="./assets/image/shopping-cart.png" alt="Cart" />
+                <span id="cart-count">0</span>
+            </a>
 
-          <a href="./pages/order-history.html">
-            <img src="./assets/image/user.png" alt="User" />
-          </a>
+            <div class="user-action">
+                <img src="./assets/image/user.png" alt="User" id="user-icon" />
+                
+                <div id="user-dropdown" class="dropdown-menu">
+                    <a href="./pages/login.html" id="login-link">Đăng nhập</a>
+                    <a href="./pages/signup.html" id="register-link">Đăng ký</a> 
+                    <div id="user-name"></div>
+                    <a href="./pages/order-history.html" id="history-link">Lịch sử đơn hàng</a>
+                    <a href="#" id="logout-btn" style="color: red;">Đăng xuất</a>
+                </div>
+            </div>
         </div>
 
         <nav>
           <ul>
-            <li><a href="#" class="active">TRANG CHỦ</a></li>
+            <li><a href="#">TRANG CHỦ</a></li>
             <li><a href="./pages/products.html">SẢN PHẨM</a></li>
             <li><a href="./pages/about.html">GIỚI THIỆU</a></li>
             <li><a href="./pages/contact.html">LIÊN HỆ</a></li>
@@ -66,150 +74,10 @@
       <div class="bg-product">
         <h1>SẢN PHẨM NỔI BẬT</h1>
 
-        <div class="product-grid">
-          
-          <div class="product-card">
-<<<<<<< HEAD
-            <a href="./pages/product-detail.html?id=7">
-                <img src="./assets/image/thun1.png" class="product-image" />
-            </a>
-=======
-            
-            <img src="./assets/image/thun1.png" class="product-image" />
->>>>>>> origin/main
-            <div class="product-info">
-              <h3>
-                  <a href="./pages/product-detail.html?id=7" style="text-decoration: none; color: inherit;">
-                      Áo thun CodeWear
-                  </a>
-              </h3>
-              <p class="price">150.000đ</p>
-              <button class="add-to-cart" data-id="7" data-name="Áo thun CodeWear" data-price="150000" data-img="./assets/image/thun1.png">
-                Thêm vào giỏ hàng
-              </button>
-            </div>
-          </div>
-
-          <div class="product-card">
-            <a href="./pages/product-detail.html?id=1">
-                <img src="./assets/image/hoddie1.2.png" class="product-image" />
-            </a>
-            <div class="product-info">
-              <h3>
-                  <a href="./pages/product-detail.html?id=1" style="text-decoration: none; color: inherit;">
-                      Hoodie trắng
-                  </a>
-              </h3>
-              <p class="price">280.000đ</p>
-              <button class="add-to-cart" data-id="1" data-name="Hoodie trắng" data-price="280000" data-img="./assets/image/hoddie1.2.png">
-                Thêm vào giỏ hàng
-              </button>
-            </div>
-          </div>
-
-          <div class="product-card">
-             <a href="./pages/product-detail.html?id=2">
-                <img src="./assets/image/hoddie2.2.png" class="product-image" />
-             </a>
-            <div class="product-info">
-              <h3>
-                  <a href="./pages/product-detail.html?id=2" style="text-decoration: none; color: inherit;">
-                      Hoodie đen
-                  </a>
-              </h3>
-              <p class="price">280.000đ</p>
-              <button class="add-to-cart" data-id="2" data-name="Hoodie đen" data-price="280000" data-img="./assets/image/hoddie2.2.png">
-                Thêm vào giỏ hàng
-              </button>
-            </div>
-          </div>
-
-          <div class="product-card">
-             <a href="./pages/product-detail.html?id=6">
-                <img src="./assets/image/lotchuot1.png" class="product-image" />
-             </a>
-            <div class="product-info">
-              <h3>
-                  <a href="./pages/product-detail.html?id=6" style="text-decoration: none; color: inherit;">
-                      Lót chuột CodeWear
-                  </a>
-              </h3>
-              <p class="price">80.000đ</p>
-              <button class="add-to-cart" data-id="6" data-name="Lót chuột CodeWear" data-price="80000" data-img="./assets/image/lotchuot1.png">
-                Thêm vào giỏ hàng
-              </button>
-            </div>
-          </div>
-
-          <div class="product-card">
-             <a href="./pages/product-detail.html?id=12">
-                <img src="./assets/image/category1.2.png" class="product-image" />
-             </a>
-            <div class="product-info">
-              <h3>
-                  <a href="./pages/product-detail.html?id=12" style="text-decoration: none; color: inherit;">
-                      Sổ tay CodeWear
-                  </a>
-              </h3>
-              <p class="price">18.000đ</p>
-              <button class="add-to-cart" data-id="12" data-name="Sổ tay CodeWear" data-price="18000" data-img="./assets/image/category1.2.png">
-                Thêm vào giỏ hàng
-              </button>
-            </div>
-          </div>
-
-          <div class="product-card">
-             <a href="./pages/product-detail.html?id=4">
-                <img src="./assets/image/thun2.png" class="product-image" />
-             </a>
-            <div class="product-info">
-              <h3>
-                  <a href="./pages/product-detail.html?id=4" style="text-decoration: none; color: inherit;">
-                      Áo trắng F-Code
-                  </a>
-              </h3>
-              <p class="price">150.000đ</p>
-              <button class="add-to-cart" data-id="4" data-name="Áo trắng F-Code" data-price="150000" data-img="./assets/image/thun2.png">
-                Thêm vào giỏ hàng
-              </button>
-            </div>
-          </div>
-
-          <div class="product-card">
-             <a href="./pages/product-detail.html?id=10">
-                <img src="./assets/image/mockhoa1.png" class="product-image" />
-             </a>
-            <div class="product-info">
-              <h3>
-                  <a href="./pages/product-detail.html?id=10" style="text-decoration: none; color: inherit;">
-                      Móc khóa F-Code
-                  </a>
-              </h3>
-              <p class="price">25.000đ</p>
-              <button class="add-to-cart" data-id="10" data-name="Móc khóa F-Code" data-price="25000" data-img="./assets/image/mockhoa1.png">
-                Thêm vào giỏ hàng
-              </button>
-            </div>
-          </div>
-
-          <div class="product-card">
-             <a href="./pages/product-detail.html?id=8">
-                <img src="./assets/image/tote1.png" class="product-image" />
-             </a>
-            <div class="product-info">
-              <h3>
-                  <a href="./pages/product-detail.html?id=8" style="text-decoration: none; color: inherit;">
-                      Túi tote
-                  </a>
-              </h3>
-              <p class="price">120.000đ</p>
-              <button class="add-to-cart" data-id="8" data-name="Túi tote" data-price="120000" data-img="./assets/image/tote1.png">
-                Thêm vào giỏ hàng
-              </button>
-            </div>
-          </div>
-
+        <div class="product-grid" id="featured-products-container">
+           <p style="grid-column: 1/-1; text-align:center; color: white;">Đang tải sản phẩm từ Server...</p>
         </div>
+
       </div>
     </section>
 
@@ -245,7 +113,7 @@
     <footer>
       <div class="footer-container">
         <div class="footer-left">
-          <img src="./assets/image/logoFCode.png" />
+          <img src="./assets/image/logoFCode.png" alt="CodeWear Logo" />
           <h3>Code Wear</h3>
           <p class="copyright">
             © 2026 <strong>CodeWear</strong>. All rights reserved
@@ -254,18 +122,20 @@
 
         <div class="footer-center">
           <div class="address">
-            <img class="icon" src="./assets/image/map.png" />
-            Lô E2a-7, Đường D1, Khu Công nghệ cao (KCNC),<br />
-            P. Long Thạnh Mỹ, TP. Thủ Đức, TP.HCM.
+            <img class="icon" src="./assets/image/map.png" alt="Map" />
+            <span>
+              Lô E2a-7, Đường D1, Khu Công nghệ cao (KCNC),<br />
+              P. Long Thạnh Mỹ, TP. Thủ Đức, TP.HCM.
+            </span>
           </div>
 
           <div class="phonenumber">
-            <img class="icon" src="./assets/image/call.png" />
+            <img class="icon" src="./assets/image/call.png" alt="Phone" />
             <span>0123456789</span>
           </div>
 
           <div class="email">
-            <img class="icon" src="./assets/image/mail.png" />
+            <img class="icon" src="./assets/image/mail.png" alt="Mail" />
             <span>codewear@gmail.com</span>
           </div>
         </div>
@@ -295,6 +165,7 @@
       </div>
     </footer>
 
+    <script src="./assets/js/config.js"></script>
     <script src="./assets/js/home.js"></script>
   </body>
 </html>

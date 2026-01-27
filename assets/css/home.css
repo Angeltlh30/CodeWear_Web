@@ -486,3 +486,200 @@ footer {
   height: 45px;
   width: auto;
 }
+<<<<<<< HEAD
+
+
+
+/* =========================================
+   HEADER & ICONS STYLES
+   ========================================= */
+
+/* Căn chỉnh khối chứa Icon */
+.header-icons {
+    display: flex;
+    align-items: center;
+    gap: 20px; 
+}
+
+/* --- 1. CART ICON --- */
+.cart-icon-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    width: 40px; 
+    height: 40px;
+    transition: transform 0.2s ease;
+}
+
+.cart-icon-wrapper img {
+    width: 24px;
+    height: 24px;
+}
+
+.cart-icon-wrapper:hover {
+    transform: scale(1.1); 
+}
+
+/* Số lượng trên giỏ hàng */
+#cart-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: #ee4d2d;
+    color: white;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 50%;
+    min-width: 18px;
+    text-align: center;
+    display: none; 
+}
+
+/* --- 2. USER ICON --- */
+.user-action {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px; 
+    height: 40px;
+}
+
+#user-icon {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.user-action:hover #user-icon {
+    transform: scale(1.1);
+}
+
+/* --- 3. DROPDOWN MENU --- */
+.dropdown-menu {
+    display: none; 
+    position: absolute;
+    top: 50px; 
+    right: 0; 
+    width: 200px;
+    background-color: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    border-radius: 8px;
+    z-index: 9999;
+    border: 1px solid #f0f0f0;
+    overflow: hidden;
+    text-align: left;
+}
+
+/* Class hiển thị menu */
+.dropdown-menu.show {
+    display: block;
+    animation: fadeIn 0.2s ease-in-out;
+}
+
+/* Style cho các link trong menu */
+.dropdown-menu a {
+    display: block;
+    width: 100%;
+    padding: 12px 15px;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    border-bottom: 1px solid #f9f9f9;
+    transition: background 0.2s, color 0.2s;
+    background: transparent;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f8f9fa;
+    color: #ee4d2d;
+}
+
+/* Nút Đăng xuất (Màu đỏ) */
+#logout-btn {
+    color: #dc2626;
+    font-weight: 500;
+}
+#logout-btn:hover {
+    background-color: #fee2e2;
+    color: #b91c1c;
+}
+
+/* Tên người dùng */
+#user-name {
+    display: none; 
+    width: 100%;
+    padding: 12px 15px;
+    font-weight: bold;
+    border-bottom: 1px solid #eee;
+    color: #ee4d2d;
+    background-color: #fffefb;
+    box-sizing: border-box;
+}
+
+/* Hiệu ứng hiện menu */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* --- USER DROPDOWN MENU  --- */
+.dropdown-menu {
+    display: none; 
+    position: absolute;
+    top: 50px; 
+    right: 0; 
+    width: 200px;
+    background-color: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    border-radius: 8px;
+    z-index: 9999;
+    border: 1px solid #f0f0f0;
+    overflow: hidden;
+    text-align: left; 
+}
+
+
+.dropdown-menu.show {
+    display: block;
+}
+
+.dropdown-menu a {
+    width: 100% !important;    
+    height: auto !important;   
+    padding: 12px 15px;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    border-bottom: 1px solid #f9f9f9;
+    transition: background 0.2s;
+    
+    border: none !important;
+    justify-content: flex-start !important; 
+}
+
+.dropdown-menu a:hover {
+    background-color: #f8f9fa;
+    color: #ee4d2d;
+    
+    transform: none !important; 
+    border: none !important;
+}
+
+#user-name {
+    display: block;
+    width: 100%;
+    padding: 12px 15px;
+    font-weight: bold;
+    border-bottom: 1px solid #eee;
+    color: #ee4d2d;
+    background-color: #fffefb;
+    box-sizing: border-box;
+}
+=======
+>>>>>>> fa183bd03f28c9c097b259360dc7fc8274d118a6

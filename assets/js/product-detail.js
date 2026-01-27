@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (typeof updateCartCount === 'function') updateCartCount();
 
     const urlParams = new URLSearchParams(window.location.search);
-    const productId = urlParams.get('id');
+    const productId = urlParams.get('id'); // Đây là _id (Mongo ID)
     const container = document.getElementById('main-product-detail');
 
     if (!productId) {
@@ -13,16 +13,18 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     try {
-        const response = await fetch(`http://localhost:3000/api/products/${productId}`);
+        // --- SỬ DỤNG CONFIG TỪ FILE config.js ---
+        const response = await fetch(`${CONFIG.API_BASE_URL}/api/products/${productId}`);
+        
         if (!response.ok) throw new Error("Sản phẩm không tồn tại");
         const product = await response.json();
 
         renderMainProduct(product);
-        loadRelatedProducts(productId);
+        loadRelatedProducts(productId); // Load sản phẩm liên quan
 
     } catch (error) {
         console.error("Lỗi:", error);
-        container.innerHTML = `<h2>Sản phẩm không tồn tại! <a href="products.html">Quay lại</a></h2>`;
+        container.innerHTML = `<h2>Sản phẩm không tồn tại hoặc lỗi kết nối! <a href="products.html">Quay lại</a></h2>`;
     }
 });
 
@@ -32,11 +34,10 @@ function renderMainProduct(product) {
     // --- TÍNH TOÁN GIÁ ---
     let realPrice = product.price || 0;
     
-    // Giá cũ = Giá hiện tại + 36% (nhân với 1.36)
+    // Giá cũ = Giá hiện tại + 36%
     let oldPriceRaw = realPrice * 1.36; 
-    
     let formattedPrice = realPrice.toLocaleString('vi-VN');
-    let oldPriceFormatted = oldPriceRaw.toLocaleString('vi-VN', { maximumFractionDigits: 0 }); // Làm tròn số
+    let oldPriceFormatted = oldPriceRaw.toLocaleString('vi-VN', { maximumFractionDigits: 0 });
     
     // Fix ảnh
     let rawImg = product.image || '';
@@ -47,7 +48,7 @@ function renderMainProduct(product) {
         ? product.gallery 
         : [imageSrc, imageSrc, imageSrc]; 
 
-    // Kiểm tra áo
+    // Kiểm tra loại sản phẩm (Áo thì hiện Size)
     const isShirt = /áo|shirt|hoodie|raglan/i.test(product.name || '');
     currentSelectedSize = "";
 
@@ -66,11 +67,11 @@ function renderMainProduct(product) {
         `;
     }
 
-    // HTML Mô tả
+    // HTML Mô tả (Scroll Content)
     let scrollContent = `
         <div class="info-card">
             <h3>Mô tả chi tiết</h3>
-            <p>${product.desc || "Đang cập nhật..."}</p>
+            <p>${product.desc || "Đang cập nhật mô tả..."}</p>
         </div>
         <div class="info-card">
             <h3>Thông số kỹ thuật</h3>
@@ -129,7 +130,7 @@ function renderMainProduct(product) {
                     </div>
                 </div>
 
-                <button class="buy-btn" onclick="handleBuyNow('${product.id}', '${product.name}', ${realPrice}, '${imageSrc}')">
+                <button class="buy-btn" onclick="handleBuyNow('${product._id}', '${product.name}', ${realPrice}, '${imageSrc}')">
                     MUA NGAY
                 </button>
             </div>
@@ -147,29 +148,35 @@ function renderMainProduct(product) {
 
 async function loadRelatedProducts(currentId) {
     try {
-        const res = await fetch('http://localhost:3000/api/products');
+        // --- SỬ DỤNG CONFIG TỪ FILE config.js ---
+        const res = await fetch(`${CONFIG.API_BASE_URL}/api/products`);
         const allProducts = await res.json();
         const listContainer = document.getElementById('related-products-list');
         if (!listContainer) return;
 
-        const related = allProducts.filter(p => p.id !== currentId).slice(0, 4);
+        // Lọc bỏ sản phẩm hiện tại (So sánh _id)
+        const related = allProducts.filter(p => p._id !== currentId).slice(0, 4);
+        
         listContainer.innerHTML = related.map(p => {
             let img = p.image || '';
             let clean = img.replace(/^(\.\/|\.\.\/)+/, '');
             let src = clean ? `../${clean}` : '../assets/image/logoFCode.png';
             
+            // Dùng p._id cho link
             return `
                 <div class="product-card">
-                    <a href="product-detail.html?id=${p.id}">
+                    <a href="product-detail.html?id=${p._id}">
                         <img src="${src}" style="height: 250px; object-fit: contain;">
                     </a>
                     <h3 style="font-size:16px; margin:10px 0;">
-                        <a href="product-detail.html?id=${p.id}" style="text-decoration:none; color:inherit">${p.name}</a>
+                        <a href="product-detail.html?id=${p._id}" style="text-decoration:none; color:inherit">${p.name}</a>
                     </h3>
                     <p style="color:#ee4d2d; font-weight:bold;">${p.price.toLocaleString()}đ</p>
                 </div>`;
         }).join('');
-    } catch (err) {}
+    } catch (err) {
+        console.error("Lỗi load related:", err);
+    }
 }
 
 // --- GLOBAL FUNCTIONS ---
@@ -192,22 +199,27 @@ window.updateQty = (delta) => {
 };
 
 window.handleBuyNow = (id, name, price, image) => {
+    // 1. Kiểm tra đăng nhập
     const user = JSON.parse(localStorage.getItem('user'));
     if (!user) {
-        alert("Vui lòng đăng nhập!");
-        window.location.href = "login.html";
+        if(confirm("Bạn cần đăng nhập để mua hàng!")) {
+            window.location.href = "login.html";
+        }
         return;
     }
 
+    // 2. Kiểm tra chọn size (nếu có bảng size)
     const hasSize = document.querySelector('.size-btn');
     if (hasSize && !currentSelectedSize) {
         alert("Vui lòng chọn Size trước!");
         return;
     }
 
+    // 3. Thêm vào giỏ
     const qty = parseInt(document.getElementById('qty-input').value) || 1;
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
     
+    // Tìm sản phẩm trùng ID và trùng Size
     let exist = cart.find(i => i.id === id && i.size === currentSelectedSize);
     
     if (exist) {
@@ -218,7 +230,11 @@ window.handleBuyNow = (id, name, price, image) => {
     
     localStorage.setItem('cart', JSON.stringify(cart));
     if(typeof updateCartCount === 'function') updateCartCount();
-    alert(`Đã thêm vào giỏ!`);
+    
+    // Hỏi người dùng muốn đi đâu
+    if(confirm(`Đã thêm "${name}" vào giỏ!\nBạn có muốn tới giỏ hàng thanh toán ngay không?`)) {
+        window.location.href = "cart.html";
+    }
 };
 
 function updateCartCount() {

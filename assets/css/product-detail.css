@@ -79,7 +79,11 @@
 
 .price .new {
     font-size: 30px;
+<<<<<<< HEAD
+    color: #ee4d2d;
+=======
     color: #ee4d2d; /* Màu đỏ cam chủ đạo */
+>>>>>>> fa183bd03f28c9c097b259360dc7fc8274d118a6
     font-weight: bold;
 }
 
@@ -90,8 +94,13 @@
 }
 
 .discount-badge {
+<<<<<<< HEAD
+    background-color: #ffe6e6; 
+    color: #d0011b; 
+=======
     background-color: #ffe6e6; /* Nền đỏ nhạt */
     color: #d0011b; /* Chữ đỏ đậm */
+>>>>>>> fa183bd03f28c9c097b259360dc7fc8274d118a6
     font-size: 12px;
     font-weight: bold;
     padding: 2px 6px;
@@ -99,7 +108,11 @@
     text-transform: uppercase;
 }
 
+<<<<<<< HEAD
+/* --- NÚT CHỌN SIZE --- */
+=======
 /* --- NÚT CHỌN SIZE (THEO YÊU CẦU) --- */
+>>>>>>> fa183bd03f28c9c097b259360dc7fc8274d118a6
 .option-group {
     margin-bottom: 20px;
 }
@@ -117,7 +130,10 @@
 .size-btn {
     min-width: 50px;
     height: 35px;
+<<<<<<< HEAD
+=======
     /* Mặc định: Chữ đen, nền trắng, khung đen */
+>>>>>>> fa183bd03f28c9c097b259360dc7fc8274d118a6
     background: #fff;
     color: #000;
     border: 1px solid #000;
@@ -128,10 +144,16 @@
     transition: all 0.2s;
 }
 
+<<<<<<< HEAD
+.size-btn:hover,
+.size-btn.active {
+    background-color: #26aa99; 
+=======
 /* Khi Hover hoặc Active: Nền xanh lá, chữ trắng, khung đen */
 .size-btn:hover,
 .size-btn.active {
     background-color: #26aa99; /* Xanh lá */
+>>>>>>> fa183bd03f28c9c097b259360dc7fc8274d118a6
     color: #fff;
     border: 1px solid #000;
 }
@@ -164,6 +186,45 @@
     outline: none;
 }
 
+<<<<<<< HEAD
+/* NÚT MUA NGAY */
+.buy-btn {
+    margin-top: 25px;
+    background-color: #1e40af;
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width: 100%;
+    max-width: 300px;
+    height: 55px;
+    
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(30, 64, 175, 0.3);
+}
+
+/* HIỆU ỨNG HOVER */
+.buy-btn:hover {
+    background-color: #153084;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(30, 64, 175, 0.4);
+}
+
+/* Hiệu ứng khi bấm xuống */
+.buy-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 5px rgba(30, 64, 175, 0.3);
+=======
 /* --- NÚT MUA (THEO YÊU CẦU) --- */
 .buy-btn {
     margin-top: 25px;
@@ -185,6 +246,7 @@
 .buy-btn:hover {
     background: #0056b3; /* Xanh dương đậm hơn khi hover */
     transform: translateY(-2px); /* Hiệu ứng nổi nhẹ */
+>>>>>>> fa183bd03f28c9c097b259360dc7fc8274d118a6
 }
 
 /* --- PHẦN DƯỚI (Scroll) --- */
