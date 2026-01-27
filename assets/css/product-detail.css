@@ -79,7 +79,7 @@
 
 .price .new {
     font-size: 30px;
-    color: #ee4d2d; /* Màu đỏ cam chủ đạo */
+    color: #ee4d2d;
     font-weight: bold;
 }
 
@@ -90,8 +90,8 @@
 }
 
 .discount-badge {
-    background-color: #ffe6e6; /* Nền đỏ nhạt */
-    color: #d0011b; /* Chữ đỏ đậm */
+    background-color: #ffe6e6; 
+    color: #d0011b; 
     font-size: 12px;
     font-weight: bold;
     padding: 2px 6px;
@@ -99,7 +99,7 @@
     text-transform: uppercase;
 }
 
-/* --- NÚT CHỌN SIZE (THEO YÊU CẦU) --- */
+/* --- NÚT CHỌN SIZE --- */
 .option-group {
     margin-bottom: 20px;
 }
@@ -117,7 +117,6 @@
 .size-btn {
     min-width: 50px;
     height: 35px;
-    /* Mặc định: Chữ đen, nền trắng, khung đen */
     background: #fff;
     color: #000;
     border: 1px solid #000;
@@ -128,10 +127,9 @@
     transition: all 0.2s;
 }
 
-/* Khi Hover hoặc Active: Nền xanh lá, chữ trắng, khung đen */
 .size-btn:hover,
 .size-btn.active {
-    background-color: #26aa99; /* Xanh lá */
+    background-color: #26aa99; 
     color: #fff;
     border: 1px solid #000;
 }

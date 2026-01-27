@@ -497,7 +497,7 @@ footer {
 .header-icons {
     display: flex;
     align-items: center;
-    gap: 20px; /* Khoảng cách giữa Giỏ hàng và User */
+    gap: 20px; 
 }
 
 /* --- 1. CART ICON --- */
@@ -518,7 +518,7 @@ footer {
 }
 
 .cart-icon-wrapper:hover {
-    transform: scale(1.1); /* Phóng to nhẹ khi di chuột */
+    transform: scale(1.1); 
 }
 
 /* Số lượng trên giỏ hàng */
@@ -534,7 +534,7 @@ footer {
     border-radius: 50%;
     min-width: 18px;
     text-align: center;
-    display: none; /* Mặc định ẩn nếu số lượng = 0 */
+    display: none; 
 }
 
 /* --- 2. USER ICON --- */
@@ -560,9 +560,9 @@ footer {
 
 /* --- 3. DROPDOWN MENU --- */
 .dropdown-menu {
-    display: none; /* Mặc định ẩn */
+    display: none; 
     position: absolute;
-    top: 50px; /* Đẩy xuống dưới icon User */
+    top: 50px; 
     right: 0; 
     width: 200px;
     background-color: white;
@@ -574,7 +574,7 @@ footer {
     text-align: left;
 }
 
-/* Class hiển thị menu (JS sẽ thêm vào) */
+/* Class hiển thị menu */
 .dropdown-menu.show {
     display: block;
     animation: fadeIn 0.2s ease-in-out;
@@ -590,7 +590,7 @@ footer {
     font-size: 14px;
     border-bottom: 1px solid #f9f9f9;
     transition: background 0.2s, color 0.2s;
-    background: transparent; /* Đảm bảo không bị ám màu nền lạ */
+    background: transparent;
 }
 
 .dropdown-menu a:hover {
@@ -610,7 +610,7 @@ footer {
 
 /* Tên người dùng */
 #user-name {
-    display: none; /* Ẩn mặc định */
+    display: none; 
     width: 100%;
     padding: 12px 15px;
     font-weight: bold;
