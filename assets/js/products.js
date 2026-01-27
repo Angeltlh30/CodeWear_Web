@@ -45,7 +45,6 @@ async function initProductPage() {
                 const idxB = displayOrder.indexOf(b.id);
                 return (idxA === -1 ? 999 : idxA) - (idxB === -1 ? 999 : idxB);
             });
-
             renderProducts(sortedData);
         } else {
             productGrid.innerHTML = '<p style="text-align:center;">Không tìm thấy sản phẩm nào.</p>';

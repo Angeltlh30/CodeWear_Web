@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	loadFeaturedProducts();
 });
 
+// --- 1. TẢI SẢN PHẨM MỚI NHẤT (Dùng Config) ---
 async function loadFeaturedProducts() {
 	const container = document.getElementById('featured-products-container');
 	if (!container) return;
@@ -55,6 +56,7 @@ async function loadFeaturedProducts() {
 	}
 }
 
+// --- 2. THÊM VÀO GIỎ HÀNG (Dành cho trang chủ) ---
 window.addToCartLocalHome = (id, name, price, image) => {
 	const user = JSON.parse(localStorage.getItem('user'));
 	if (!user) {
@@ -77,6 +79,7 @@ window.addToCartLocalHome = (id, name, price, image) => {
 	alert(`Đã thêm "${name}" vào giỏ hàng!`);
 };
 
+// --- 3. CẬP NHẬT SỐ LƯỢNG GIỎ HÀNG ---
 function updateCartCount() {
 	const cart = JSON.parse(localStorage.getItem('cart')) || [];
 	const count = cart.reduce((sum, item) => sum + item.quantity, 0);
@@ -87,6 +90,7 @@ function updateCartCount() {
 	}
 }
 
+// --- 4. XỬ LÝ MENU USER ---
 function setupUserMenu() {
 	const userIcon = document.getElementById('user-icon');
 	const dropdown = document.getElementById('user-dropdown');

@@ -1,4 +1,4 @@
-﻿﻿document.addEventListener('DOMContentLoaded', () => {
+﻿document.addEventListener('DOMContentLoaded', () => {
     const registerBtn = document.getElementById('registerBtn');
 
     if (registerBtn) {
@@ -43,7 +43,7 @@
                 registerBtn.innerText = "Đang xử lý...";
                 registerBtn.disabled = true; 
                 
-                // Sử dụng CONFIG từ file config.js
+                // Sử dụng CONFIG thay vì link cứng
                 const res = await fetch(`${CONFIG.API_BASE_URL}/api/auth/register`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },

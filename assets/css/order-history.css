@@ -13,10 +13,17 @@ body {
 }
 
 .container {
+<<<<<<< HEAD
     max-width: 1000px; 
     margin: 0 auto;
     padding: 0 15px;
     display: block; 
+=======
+    max-width: 1000px; /* Giới hạn chiều rộng để nội dung tập trung ở giữa */
+    margin: 0 auto;
+    padding: 0 15px;
+    display: block; /* Bỏ flexbox vì không còn sidebar */
+>>>>>>> fa183bd03f28c9c097b259360dc7fc8274d118a6
 }
 
 /* --- 2. MAIN CONTENT --- */
@@ -31,7 +38,11 @@ body {
     margin-bottom: 20px;
     border-radius: 2px;
     box-shadow: 0 1px 1px 0 rgba(0,0,0,.05);
+<<<<<<< HEAD
     position: sticky; 
+=======
+    position: sticky; /* Dính tab lên trên khi cuộn (tùy chọn) */
+>>>>>>> fa183bd03f28c9c097b259360dc7fc8274d118a6
     top: 0;
     z-index: 10;
 }
@@ -87,7 +98,11 @@ body {
 }
 
 .order-status {
+<<<<<<< HEAD
     color: #ee4d2d; 
+=======
+    color: #ee4d2d; /* Màu cam đặc trưng */
+>>>>>>> fa183bd03f28c9c097b259360dc7fc8274d118a6
     text-transform: uppercase;
     font-size: 14px;
     font-weight: 500;
@@ -107,7 +122,11 @@ body {
 }
 
 .order-item:hover {
+<<<<<<< HEAD
     background-color: #fafafa; 
+=======
+    background-color: #fafafa; /* Hiệu ứng hover nhẹ */
+>>>>>>> fa183bd03f28c9c097b259360dc7fc8274d118a6
 }
 
 .order-item:last-child {
@@ -157,6 +176,7 @@ body {
 
 /* Footer: Tổng tiền */
 .card-footer {
+<<<<<<< HEAD
     background: #fffefb; 
     padding: 20px 24px;
     border-top: 1px solid #f0f0f0;
@@ -164,6 +184,14 @@ body {
     justify-content: flex-end; 
     align-items: center;
     gap: 30px
+=======
+    background: #fffefb; /* Nền hơi vàng nhẹ */
+    padding: 20px 24px;
+    border-top: 1px solid #f0f0f0;
+    display: flex;
+    justify-content: flex-end; /* Căn phải */
+    align-items: center;
+>>>>>>> fa183bd03f28c9c097b259360dc7fc8274d118a6
 }
 
 .total-section {

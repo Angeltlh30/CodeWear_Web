@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+// File: assets/js/cart.js
+
+>>>>>>> fa183bd03f28c9c097b259360dc7fc8274d118a6
 document.addEventListener('DOMContentLoaded', () => {
     renderCart();
     updateCartCount();
@@ -53,7 +58,11 @@ function renderCart() {
         let img = item.image;
         if(img && !img.startsWith('../') && !img.startsWith('http')) img = '../' + img;
 
+<<<<<<< HEAD
         // --- Hiển thị Size ---
+=======
+        // --- CẬP NHẬT: Hiển thị Size ---
+>>>>>>> fa183bd03f28c9c097b259360dc7fc8274d118a6
         // Nếu item có size thì tạo badge hiển thị, nếu không thì để trống
         let sizeBadge = item.size 
             ? `<span style="display:inline-block; font-size: 12px; color: #555; background: #f0f0f0; padding: 2px 8px; border-radius: 4px; margin-top: 5px;">Size: <strong>${item.size}</strong></span>` 
@@ -111,7 +120,11 @@ function updateCartCount() {
     const badge = document.getElementById('cart-count');
     if(badge) { 
         badge.innerText = count; 
+<<<<<<< HEAD
         badge.style.display = count > 0 ? 'flex' : 'none'; 
+=======
+        badge.style.display = count > 0 ? 'flex' : 'none'; // Flex để căn giữa số
+>>>>>>> fa183bd03f28c9c097b259360dc7fc8274d118a6
     }
 }
 
@@ -139,13 +152,21 @@ async function handleCheckout() {
     }
 
     try {
+<<<<<<< HEAD
         // --- SỬ DỤNG CONFIG TỪ FILE config.js ---
         const res = await fetch(`${CONFIG.API_BASE_URL}/api/orders`, {
+=======
+        const res = await fetch('http://localhost:3000/api/orders', {
+>>>>>>> fa183bd03f28c9c097b259360dc7fc8274d118a6
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
                 userId: user.id || user._id,
+<<<<<<< HEAD
                 items: cart, 
+=======
+                items: cart, // Gửi toàn bộ cart (đã bao gồm field size) lên server
+>>>>>>> fa183bd03f28c9c097b259360dc7fc8274d118a6
                 totalAmount: totalAmount
             })
         });
@@ -160,7 +181,11 @@ async function handleCheckout() {
         }
     } catch (err) {
         console.error(err);
+<<<<<<< HEAD
         alert("Lỗi kết nối Server! Vui lòng kiểm tra lại cấu hình API.");
+=======
+        alert("Lỗi kết nối Server! (Hãy chắc chắn bạn đã chạy 'node src/index.js')");
+>>>>>>> fa183bd03f28c9c097b259360dc7fc8274d118a6
     } finally {
         if (btn) {
             btn.innerText = "THANH TOÁN";

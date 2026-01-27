@@ -275,15 +275,26 @@ nav li a.active {
     transform: translateY(-8px);
 }
 
+<<<<<<< HEAD
 .product-image {
     width: 100%;
     height: 260px; 
     background-color: #fff;
     overflow: hidden;
+=======
+/* 1. Khung chứa ảnh: Cố định chiều cao */
+.product-image {
+    width: 100%;
+    height: 260px; /* BẮT BUỘC phải có chiều cao cố định */
+    background-color: #fff;
+    overflow: hidden;
+    /* Dùng Flexbox để căn giữa nội dung bên trong */
+>>>>>>> fa183bd03f28c9c097b259360dc7fc8274d118a6
     display: flex;
     align-items: center;
     justify-content: center;
     border-bottom: 1px solid #eee;
+<<<<<<< HEAD
     padding: 10px; 
 }
 
@@ -291,10 +302,21 @@ nav li a.active {
     display: flex;
     width: 100%;
     height: 100%;  
+=======
+    padding: 10px; /* Đệm một chút để ảnh không dính sát viền */
+}
+
+/* 2. Thẻ A bao quanh ảnh (FIX QUAN TRỌNG: Phải cho nó full chiều cao) */
+.product-image a {
+    display: flex; /* Biến thẻ a thành flex container */
+    width: 100%;
+    height: 100%;  /* Chiếm trọn khung cha (.product-image) */
+>>>>>>> fa183bd03f28c9c097b259360dc7fc8274d118a6
     align-items: center;
     justify-content: center;
 }
 
+<<<<<<< HEAD
 .product-image img {
     max-width: 100%;
     max-height: 100%;
@@ -304,6 +326,19 @@ nav li a.active {
     transition: transform 0.3s ease;
 }
 
+=======
+/* 3. Hình ảnh bên trong */
+.product-image img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;  /* Để tự động theo tỉ lệ */
+    height: auto; /* Để tự động theo tỉ lệ */
+    object-fit: contain; /* Quan trọng: Giữ tỉ lệ ảnh, không bị cắt/zoom */
+    transition: transform 0.3s ease;
+}
+
+/* Hiệu ứng hover (giữ nguyên của bạn) */
+>>>>>>> fa183bd03f28c9c097b259360dc7fc8274d118a6
 .product-card:hover .product-image img {
     transform: scale(1.05);
 }

@@ -1,4 +1,4 @@
-require('dotenv').config();
+require('dotenv').config(); // Load biến môi trường từ file .env
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
