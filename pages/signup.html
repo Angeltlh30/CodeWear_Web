@@ -3,87 +3,142 @@
   <head>
     <meta charset="UTF-8" />
     <title>Register - CodeWear</title>
-<<<<<<< HEAD
     <link rel="stylesheet" href="../assets/css/signup.css" />
-    <style> #emailInput, #nameInput, #passwordInput { margin-left: 0px; } </style>
+    <style>
+      #emailInput,
+      #nameInput,
+      #passwordInput {
+        margin-left: 0px;
+      }
+    </style>
   </head>
-  <body style="font-family: 'Roboto', sans-serif; background: #f6f8fb">
+  <body
+    style="font-family: &quot;Roboto&quot;, sans-serif; background: #f6f8fb"
+  >
     <main class="register-wrapper">
       <div class="register-card">
         <br /><br />
-        <div class="login-logo"><img src="../assets/image/logoFCode.png" alt="CodeWear Logo" /></div>
-        
+        <div class="login-logo">
+          <img src="../assets/image/logoFCode.png" alt="CodeWear Logo" />
+        </div>
+
         <h2>Sign up In CodeWear</h2>
         <p class="subtitle">Sign up your account</p>
 
-        <div class="form-input"><input type="text" id="nameInput" placeholder="Name" /></div>
-        <div class="form-input"><input type="email" id="emailInput" placeholder="Email" /></div>
-        <div class="form-input"><input type="password" id="passwordInput" placeholder="Password" /></div>
-        <div class="form-input"><input type="password" id="repasswordInput" placeholder="Confirm Password" /></div>
+        <div class="form-input">
+          <input type="text" id="nameInput" placeholder="Name" />
+        </div>
+        <div class="form-input">
+          <input type="email" id="emailInput" placeholder="Email" />
+        </div>
+        <div class="form-input">
+          <input type="password" id="passwordInput" placeholder="Password" />
+        </div>
+        <div class="form-input">
+          <input
+            type="password"
+            id="repasswordInput"
+            placeholder="Confirm Password"
+          />
+        </div>
 
         <button id="registerBtn" style="border-radius: 50px">SIGN UP</button>
 
-        <div class="divider"><span></span><p>OR</p><span></span></div>
+        <div class="divider">
+          <span></span>
+          <p>OR</p>
+          <span></span>
+        </div>
 
-        <button id="loginBtn" onclick="window.location.href = 'login.html'" style="border-radius: 50px">SIGN IN</button>
-        
+        <button
+          id="loginBtn"
+          onclick="window.location.href = 'login.html'"
+          style="border-radius: 50px"
+        >
+          SIGN IN
+        </button>
+
         <br /><br />
         <p class="footer-tet">Good space, good service</p>
 
-    <footer class="site-footer">
-      <div class="footer-container">
-        <div class="footer-left">
-          <img src="../assets/image/logoFCode.png" alt="CodeWear Logo" />
-          <h3>Code Wear</h3>
-          <p class="copyright">
-            © 2026 <strong>CodeWear</strong>. All rights reserved
-          </p>
-        </div>
+        <footer class="site-footer">
+          <div class="footer-container">
+            <div class="footer-left">
+              <img src="../assets/image/logoFCode.png" alt="CodeWear Logo" />
+              <h3>Code Wear</h3>
+              <p class="copyright">
+                © 2026 <strong>CodeWear</strong>. All rights reserved
+              </p>
+            </div>
 
-        <div class="footer-center">
-          <div class="address">
-            <img class="icon" src="../assets/image/map.png" alt="Map" />
-            <span>
-              Lô E2a-7, Đường D1, Khu Công nghệ cao (KCNC),<br />
-              P. Long Thạnh Mỹ, TP. Thủ Đức, TP.HCM.
-            </span>
+            <div class="footer-center">
+              <div class="address">
+                <img class="icon" src="../assets/image/map.png" alt="Map" />
+                <span>
+                  Lô E2a-7, Đường D1, Khu Công nghệ cao (KCNC),<br />
+                  P. Long Thạnh Mỹ, TP. Thủ Đức, TP.HCM.
+                </span>
+              </div>
+
+              <div class="phonenumber">
+                <img class="icon" src="../assets/image/call.png" alt="Phone" />
+                <span>0123456789</span>
+              </div>
+
+              <div class="email">
+                <img class="icon" src="../assets/image/mail.png" alt="Mail" />
+                <span>codewear@gmail.com</span>
+              </div>
+            </div>
+
+            <div class="footer-right">
+              <a
+                href="https://www.facebook.com/fcodeclub"
+                class="social-item facebook"
+                target="_blank"
+              >
+                <img
+                  class="social-icon"
+                  src="../assets/image/facebook.png"
+                  alt="Facebook"
+                />
+                <span>Facebook</span>
+              </a>
+              <a href="#" class="social-item instagram">
+                <img
+                  class="social-icon"
+                  src="../assets/image/instagram.png"
+                  alt="Instagram"
+                />
+                <span>Instagram</span>
+              </a>
+              <a href="#" class="social-item youtube">
+                <img
+                  class="social-icon"
+                  src="../assets/image/youtube.png"
+                  alt="Youtube"
+                />
+                <span>Youtube</span>
+              </a>
+              <a href="#" class="social-item linkedin">
+                <img
+                  class="social-icon"
+                  src="../assets/image/linkedln.png"
+                  alt="LinkedIn"
+                />
+                <span>LinkedIn</span>
+              </a>
+            </div>
           </div>
 
-          <div class="phonenumber">
-            <img class="icon" src="../assets/image/call.png" alt="Phone" />
-            <span>0123456789</span>
+          <div class="footer-bottom">
+            <img
+              class="dmca-icon"
+              src="../assets/image/dmca-logo.png"
+              alt="DMCA Protected"
+            />
           </div>
-
-          <div class="email">
-            <img class="icon" src="../assets/image/mail.png" alt="Mail" />
-            <span>codewear@gmail.com</span>
-          </div>
-        </div>
-
-        <div class="footer-right">
-          <a href="https://www.facebook.com/fcodeclub" class="social-item facebook" target="_blank">
-            <img class="social-icon" src="../assets/image/facebook.png" alt="Facebook" />
-            <span>Facebook</span>
-          </a>
-          <a href="#" class="social-item instagram">
-            <img class="social-icon" src="../assets/image/instagram.png" alt="Instagram" />
-            <span>Instagram</span>
-          </a>
-          <a href="#" class="social-item youtube">
-            <img class="social-icon" src="../assets/image/youtube.png" alt="Youtube" />
-            <span>Youtube</span>
-          </a>
-          <a href="#" class="social-item linkedin">
-            <img class="social-icon" src="../assets/image/linkedln.png" alt="LinkedIn" />
-            <span>LinkedIn</span>
-          </a>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <img class="dmca-icon" src="../assets/image/dmca-logo.png" alt="DMCA Protected" />
-      </div>
-    </footer>
+        </footer>
       </div>
     </main>
     <script src="../assets/js/config.js"></script>
