@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CodeWear</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/home.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="logo">
+          <a href="#" style="display: flex; align-items: center; text-decoration: none; color: inherit;">
+             <img src="./assets/image/logoFCode.png" alt="" />
+             <span>CodeWear</span>
+          </a>
+        </div>
+
+        <div class="search-box">
+          <input type="text" placeholder="Tìm kiếm" />
+          <button>
+            <img src="./assets/image/search.png" alt="" />
+          </button>
+        </div>
+
+        <div class="header-icons">
+            <a href="./pages/cart.html">
+                <img src="./assets/image/shopping-cart.png" alt="Cart" />
+                <span id="cart-count">0</span>
+            </a>
+
+            <div class="user-action">
+                <img src="./assets/image/user.png" alt="User" id="user-icon" />
+                
+                <div id="user-dropdown" class="dropdown-menu">
+                    <a href="./pages/login.html" id="login-link">Đăng nhập</a>
+                    <a href="./pages/signup.html" id="register-link">Đăng ký</a> 
+                    <div id="user-name"></div>
+                    <a href="./pages/order-history.html" id="history-link">Lịch sử đơn hàng</a>
+                    <a href="#" id="logout-btn" style="color: red;">Đăng xuất</a>
+                </div>
+            </div>
+        </div>
+
+        <nav>
+          <ul>
+            <li><a href="#">TRANG CHỦ</a></li>
+            <li><a href="./pages/products.html">SẢN PHẨM</a></li>
+            <li><a href="./pages/about.html">GIỚI THIỆU</a></li>
+            <li><a href="./pages/contact.html">LIÊN HỆ</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="hero-image">
+        <img src="./assets/image/Background_trang_chu.jpg" alt="" />
+      </div>
+
+      <div class="hero-content">
+        <h1>WHERE CODE<br />MEETS FASHION</h1>
+        <p>Thể hiện đam mê lập trình theo phong cách riêng của bạn.</p>
+        <a href="./pages/products.html" class="btn-shop"> Mua sắm → </a>
+      </div>
+    </section>
+
+    <section class="product">
+      <div class="bg-product">
+        <h1>SẢN PHẨM NỔI BẬT</h1>
+
+        <div class="product-grid" id="featured-products-container">
+           <p style="grid-column: 1/-1; text-align:center; color: white;">Đang tải sản phẩm từ Server...</p>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="about">
+      <div class="about-container">
+        <h1>GIỚI THIỆU VỀ CODEWEAR</h1>
+        <div class="about-content">
+          <div class="about-images">
+            <div class="about-image">
+              <span class="image-frame"></span>
+              <img src="./assets/image/coming_soon.png" alt="Coming soon" />
+            </div>
+          </div>
+
+          <div class="about-infor">
+            <p>
+              Chúng tôi nhận ra rằng nhiều CLB công nghệ thiếu nguồn lực để duy
+              trì hoạt động và phát triển cộng đồng lập trình trẻ.
+            </p>
+            <p>
+              Vì vậy, shop thời trang online này ra đời – nơi mỗi sản phẩm được
+              bán ra là một khoản gây quỹ trực tiếp cho CLB F Code.
+            </p>
+            <p>
+              Không chỉ bán quần áo, chúng tôi xây dựng một hệ sinh thái nơi
+              thời trang hỗ trợ tri thức, và cộng đồng tạo ra giá trị lâu dài.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-left">
+          <img src="./assets/image/logoFCode.png" alt="CodeWear Logo" />
+          <h3>Code Wear</h3>
+          <p class="copyright">
+            © 2026 <strong>CodeWear</strong>. All rights reserved
+          </p>
+        </div>
+
+        <div class="footer-center">
+          <div class="address">
+            <img class="icon" src="./assets/image/map.png" alt="Map" />
+            <span>
+              Lô E2a-7, Đường D1, Khu Công nghệ cao (KCNC),<br />
+              P. Long Thạnh Mỹ, TP. Thủ Đức, TP.HCM.
+            </span>
+          </div>
+
+          <div class="phonenumber">
+            <img class="icon" src="./assets/image/call.png" alt="Phone" />
+            <span>0123456789</span>
+          </div>
+
+          <div class="email">
+            <img class="icon" src="./assets/image/mail.png" alt="Mail" />
+            <span>codewear@gmail.com</span>
+          </div>
+        </div>
+
+        <div class="footer-right">
+          <a href="https://www.facebook.com/fcodeclub" class="social-item facebook" target="_blank">
+            <img class="social-icon" src="./assets/image/facebook.png" alt="Facebook" />
+            <span>Facebook</span>
+          </a>
+          <a href="#" class="social-item instagram">
+            <img class="social-icon" src="./assets/image/instagram.png" alt="Instagram" />
+            <span>Instagram</span>
+          </a>
+          <a href="#" class="social-item youtube">
+            <img class="social-icon" src="./assets/image/youtube.png" alt="Youtube" />
+            <span>Youtube</span>
+          </a>
+          <a href="#" class="social-item linkedin">
+            <img class="social-icon" src="./assets/image/linkedln.png" alt="LinkedIn" />
+            <span>LinkedIn</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <img class="dmca-icon" src="./assets/image/dmca-logo.png" alt="DMCA Protected" />
+      </div>
+    </footer>
+
+    <script src="./assets/js/config.js"></script>
+    <script src="./assets/js/home.js"></script>
+  </body>
+</html>

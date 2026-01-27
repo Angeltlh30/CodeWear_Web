@@ -1,0 +1,220 @@
+/* =======================================================
+   ORDER HISTORY PAGE STYLES (CLEAN VERSION)
+   ======================================================= */
+
+/* --- 1. LAYOUT CHUNG --- */
+body {
+    background-color: #f5f5f5; /* Nền xám nhạt */
+}
+
+.order-history-wrapper {
+    padding: 30px 0 60px;
+    min-height: 80vh;
+}
+
+.container {
+    max-width: 1000px; /* Giới hạn chiều rộng để nội dung tập trung ở giữa */
+    margin: 0 auto;
+    padding: 0 15px;
+    display: block; /* Bỏ flexbox vì không còn sidebar */
+}
+
+/* --- 2. MAIN CONTENT --- */
+.content-area {
+    width: 100%;
+}
+
+/* Tabs Navigation */
+.tabs {
+    background: #fff;
+    display: flex;
+    margin-bottom: 20px;
+    border-radius: 2px;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,.05);
+    position: sticky; /* Dính tab lên trên khi cuộn (tùy chọn) */
+    top: 0;
+    z-index: 10;
+}
+
+.tab-item {
+    flex: 1;
+    text-align: center;
+    padding: 16px 0;
+    font-size: 16px;
+    color: #555;
+    background: #fff;
+    border: none;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-weight: 500;
+}
+
+.tab-item:hover {
+    color: #ee4d2d;
+}
+
+.tab-item.active {
+    color: #ee4d2d;
+    border-bottom: 2px solid #ee4d2d;
+}
+
+/* --- 3. ORDER CARD (THẺ ĐƠN HÀNG) --- */
+.order-card {
+    background: #fff;
+    margin-bottom: 15px;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,.05);
+    border-radius: 2px;
+    border: 1px solid #eaeaea;
+}
+
+/* Header: Shop Name & Status */
+.card-header {
+    padding: 15px 24px;
+    border-bottom: 1px solid #f5f5f5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+}
+
+.shop-info {
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #333;
+}
+
+.order-status {
+    color: #ee4d2d; /* Màu cam đặc trưng */
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Body: Danh sách sản phẩm */
+.card-body {
+    padding: 0;
+}
+
+.order-item {
+    display: flex;
+    padding: 15px 24px;
+    border-bottom: 1px solid #f5f5f5;
+    background-color: #fff;
+    transition: background-color 0.2s;
+}
+
+.order-item:hover {
+    background-color: #fafafa; /* Hiệu ứng hover nhẹ */
+}
+
+.order-item:last-child {
+    border-bottom: none;
+}
+
+.item-img {
+    width: 80px;
+    height: 80px;
+    border: 1px solid #e1e1e1;
+    object-fit: contain;
+    background: #fff;
+    border-radius: 2px;
+}
+
+.item-info {
+    flex: 1;
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.item-info h4 {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0 0 6px;
+    color: #333;
+    line-height: 1.4;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.item-meta {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 4px;
+}
+
+.item-price {
+    font-size: 15px;
+    color: #ee4d2d;
+    font-weight: 500;
+}
+
+/* Footer: Tổng tiền */
+.card-footer {
+    background: #fffefb; /* Nền hơi vàng nhẹ */
+    padding: 20px 24px;
+    border-top: 1px solid #f0f0f0;
+    display: flex;
+    justify-content: flex-end; /* Căn phải */
+    align-items: center;
+    gap: 30px
+}
+
+.total-section {
+    display: flex;
+    align-items: center;
+}
+
+.total-label {
+    font-size: 14px;
+    color: #333;
+    margin-right: 10px;
+}
+
+.total-price {
+    color: #ee4d2d;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 10px;
+    }
+    .tabs {
+        overflow-x: auto;
+        white-space: nowrap;
+        justify-content: flex-start;
+    }
+    .tab-item {
+        min-width: 100px;
+        padding: 12px 0;
+        font-size: 14px;
+    }
+    .card-header {
+        padding: 12px 15px;
+    }
+    .order-item {
+        padding: 12px 15px;
+    }
+    .item-img {
+        width: 60px;
+        height: 60px;
+    }
+    .item-info h4 {
+        font-size: 14px;
+    }
+    .card-footer {
+        padding: 15px;
+    }
+    .total-price {
+        font-size: 20px;
+    }
+}
