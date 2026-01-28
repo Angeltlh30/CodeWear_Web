@@ -1,56 +1,67 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const loginBtn = document.getElementById("loginBtn");
+document.addEventListener('DOMContentLoaded', () => {
+    // Lấy nút đăng nhập
+    const loginBtn = document.getElementById('loginBtn');
 
-  if (loginBtn) {
-    loginBtn.addEventListener("click", async (e) => {
-      e.preventDefault();
+    if (loginBtn) {
+        loginBtn.addEventListener('click', async (e) => {
+            e.preventDefault(); 
 
-      // 1. Lấy dữ liệu Input
-      const email = document.getElementById("emailInput").value.trim();
-      const password = document.getElementById("passwordInput").value.trim();
+            // Lấy dữ liệu từ input
+            const email = document.getElementById('emailInput').value.trim();
+            const password = document.getElementById('passwordInput').value.trim();
 
-      // 2. Validate dữ liệu
-      if (!email || !password) {
-        alert("Vui lòng nhập đầy đủ Email và Mật khẩu!");
-        return;
-      }
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailRegex.test(email)) {
-        alert("Email không đúng định dạng!");
-        return;
-      }
-      // 3. Gọi API Đăng nhập
-      try {
-        const originalText = loginBtn.innerText;
-        loginBtn.innerText = "Đang xử lý...";
-        loginBtn.disabled = true;
+            // 1. Kiểm tra dữ liệu nhập (Trống)
+            if (!email || !password) {
+                alert("Vui lòng nhập đầy đủ Email và Mật khẩu!");
+                return;
+            }
 
-        // Sử dụng biến CONFIG thay vì link cứng
-        const res = await fetch(`${CONFIG.API_BASE_URL}/api/auth/login`, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ email, password }),
+            // 2. Kiểm tra định dạng Email 
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert("Email không đúng định dạng!");
+                return;
+            }
+
+            // Lưu lại chữ ban đầu ("SIGN IN") để dùng lại sau 
+            const originalText = loginBtn.innerText; 
+
+            // 3. Gọi API đăng nhập
+            try {
+                // Hiệu ứng loading
+                loginBtn.innerText = "Đang xử lý...";
+                loginBtn.disabled = true;
+
+                // Sử dụng biến CONFIG
+                const res = await fetch(`${CONFIG.API_BASE_URL}/api/auth/login`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ email, password })
+                });
+
+                const data = await res.json();
+
+                if (res.ok) {
+                    // Đăng nhập thành công -> Lưu thông tin
+                    localStorage.setItem('token', data.token);
+                    localStorage.setItem('user', JSON.stringify(data.user));
+
+                    alert("Đăng nhập thành công!");
+                    
+                    // Chuyển về trang chủ (Lùi ra 1 cấp thư mục)
+                    window.location.href = "../index.html"; 
+                } else {
+                    // Đăng nhập thất bại
+                    alert(data.message || "Email hoặc mật khẩu không đúng!");
+                }
+            } catch (error) {
+                console.error("Lỗi:", error);
+                alert("Lỗi kết nối Server! Vui lòng thử lại sau.");
+            } finally {
+                // Trả lại trạng thái nút bấm 
+                loginBtn.innerText = originalText; 
+                loginBtn.disabled = false;
+            }
         });
-
-        const data = await res.json();
-
-        if (res.ok) {
-          // 4. Đăng nhập thành công
-          localStorage.setItem("token", data.token);
-          localStorage.setItem("user", JSON.stringify(data.user));
-
-          alert("Đăng nhập thành công!");
-          window.location.href = "../index.html";
-        } else {
-          alert(data.message || "Email hoặc mật khẩu không đúng!");
-        }
-      } catch (error) {
-        console.error("Lỗi:", error);
-        alert("Lỗi kết nối Server! Vui lòng kiểm tra lại cấu hình API.");
-      } finally {
-        loginBtn.innerText = "ĐĂNG NHẬP";
-        loginBtn.disabled = false;
-      }
-    });
-  }
+    }
 });

@@ -1,0 +1,210 @@
+[
+  {
+    "name": "Hoodie F-Code (Pullover)",
+    "price": 280000,
+    "image": "../assets/image/hoddie1.png",
+    "category": "Hoodie",
+    "id": "1",
+    "desc": "Mẫu hoodie F-Code bản chui đầu (Pullover) nổi bật với thiết kế tối giản...",
+    "info": "- <b>Xuất xứ:</b> Việt Nam<br>- <b>Chất liệu:</b> Nỉ cotton...",
+    "gallery": [
+      "../assets/image/hoddie1.png",
+      "../assets/image/hoddie1.2.png",
+      "../assets/image/hoddie1.3.png"
+    ]
+  },
+  {
+    "name": "Hoodie F-Code (Zip)",
+    "price": 280000,
+    "image": "../assets/image/hoddie2.png",
+    "category": "Hoodie",
+    "id": "2",
+    "desc": "Mẫu hoodie F-Code bản khóa kéo (Zip hoodie) gây ấn tượng...",
+    "info": "- <b>Xuất xứ:</b> Việt Nam<br>- <b>Chất liệu:</b> Nỉ cotton dày dặn...",
+    "gallery": [
+      "../assets/image/hoddie2.png",
+      "../assets/image/hoddie2.2.png",
+      "../assets/image/hoddie2.3.png"
+    ]
+  },
+  {
+    "name": "Túi Tote F-Code (Trắng)",
+    "price": 120000,
+    "image": "../assets/image/tote1.png",
+    "category": "Tote Bag",
+    "id": "3",
+    "desc": "Mẫu túi tote F-Code phiên bản màu trắng gây ấn tượng với thiết kế thanh lịch...",
+    "info": "- <b>Xuất xứ:</b> Việt Nam<br>- <b>Chất liệu:</b> Vải Canvas trắng bền bỉ...",
+    "gallery": [
+      "../assets/image/tote1.png",
+      "../assets/image/tote1.2.png",
+      "../assets/image/tote1.3.png"
+    ]
+  },
+  {
+    "name": "Áo Polo Trắng F-Code",
+    "price": 150000,
+    "image": "../assets/image/thun2.png",
+    "category": "T-Shirt",
+    "id": "4",
+    "desc": "Áo thun polo F-Code màu trắng mang phong cách lịch sự, tinh tế...",
+    "info": "- <b>Xuất xứ:</b> Việt Nam<br>- <b>Chất liệu:</b> Cotton cao cấp...",
+    "gallery": [
+      "../assets/image/thun2.png",
+      "../assets/image/thun2.2.png",
+      "../assets/image/thun2.3.png"
+    ]
+  },
+  {
+    "name": "Áo Sweatshirt Trắng",
+    "price": 150000,
+    "image": "../assets/image/thun5.png",
+    "category": "T-Shirt",
+    "id": "5",
+    "desc": "Áo sweatshirt F-Code màu trắng mang phong cách tối giản...",
+    "info": "- <b>Xuất xứ:</b> Việt Nam<br>- <b>Chất liệu:</b> Nỉ cotton mềm...",
+    "gallery": [
+      "../assets/image/thun5.png",
+      "../assets/image/thun5.2.png",
+      "../assets/image/thun5.3.png"
+    ]
+  },
+  {
+    "name": "Lót chuột F-Code",
+    "price": 80000,
+    "image": "../assets/image/lotchuot1.png",
+    "category": "Accessories",
+    "id": "6",
+    "desc": "Mẫu lót chuột F-Code gây ấn tượng với bề mặt đen tuyền...",
+    "info": "- <b>Xuất xứ:</b> Việt Nam<br>- <b>Chất liệu:</b> Vải mượt...",
+    "gallery": [
+      "../assets/image/lotchuot1.png",
+      "../assets/image/lotchuot1.2.png",
+      "../assets/image/lotchuot1.3.png"
+    ]
+  },
+  {
+    "name": "Áo thun F-Code (Đen)",
+    "price": 150000,
+    "image": "../assets/image/thun3.png",
+    "category": "T-Shirt",
+    "id": "7",
+    "desc": "Áo thun đen F-Code mang phong cách hiện đại, đậm chất công nghệ...",
+    "info": "- <b>Xuất xứ:</b> Việt Nam<br>- <b>Chất liệu:</b> Cotton mềm...",
+    "gallery": [
+      "../assets/image/thun3.png",
+      "../assets/image/thun3.1.png",
+      "../assets/image/thun3.2.png"
+    ]
+  },
+  {
+    "name": "Bộ Sticker 'Code Passion'",
+    "price": 30000,
+    "image": "../assets/image/sticker1.2.png",
+    "category": "Sticker",
+    "id": "8",
+    "desc": "Bộ sticker F-Code gây ấn tượng với những thiết kế mang đậm 'chất'...",
+    "info": "- <b>Xuất xứ:</b> Việt Nam<br>- <b>Chất liệu:</b> Decal nhựa...",
+    "gallery": [
+      "../assets/image/sticker1.2.png",
+      "../assets/image/stiker1.3.png"
+    ]
+  },
+  {
+    "name": "Ốp lưng F-Code",
+    "price": 35000,
+    "image": "../assets/image/phonecase1.png",
+    "category": "Phonecase",
+    "id": "9",
+    "desc": "Mẫu ốp lưng F-Code gây ấn tượng với diện mạo tối giản...",
+    "info": "- <b>Xuất xứ:</b> Việt Nam<br>- <b>Chất liệu:</b> Nhựa dẻo TPU...",
+    "gallery": [
+      "../assets/image/phonecase1.png",
+      "../assets/image/phonecase1.2.png",
+      "../assets/image/phonecase1.3.png"
+    ]
+  },
+  {
+    "name": "Móc khóa F-Code",
+    "price": 25000,
+    "image": "../assets/image/mockhoa1.png",
+    "category": "Keychain",
+    "id": "10",
+    "desc": "Mẫu móc khóa F-Code gây ấn tượng với thiết kế được cắt gọn...",
+    "info": "- <b>Xuất xứ:</b> Việt Nam<br>- <b>Chất liệu:</b> Mica (Acrylic)...",
+    "gallery": [
+      "../assets/image/mockhoa1.png",
+      "../assets/image/mockhoa1.2.png",
+      "../assets/image/mockhoa1.3.png"
+    ]
+  },
+  {
+    "name": "Bộ bút CodeWear",
+    "price": 5000,
+    "image": "../assets/image/category1.png",
+    "category": "Stationery",
+    "id": "11",
+    "desc": "Bộ bút CodeWear gây ấn tượng với thiết kế hiện đại...",
+    "info": "- <b>Xuất xứ:</b> Việt Nam<br>- <b>Chất liệu:</b> Nhựa cao cấp...",
+    "gallery": [
+      "../assets/image/category1.png",
+      "../assets/image/category1.2.png",
+      "../assets/image/category1.3.png"
+    ]
+  },
+  {
+    "name": "Vở CodeWear",
+    "price": 18000,
+    "image": "../assets/image/category1.2.png",
+    "category": "Stationery",
+    "id": "12",
+    "desc": "Vở CodeWear thiết kế dành riêng cho dân lập trình...",
+    "info": "- <b>Xuất xứ:</b> Việt Nam<br>- <b>Kích thước:</b> B5...",
+    "gallery": [
+      "../assets/image/category1.2.png",
+      "../assets/image/category1.3.png",
+      "../assets/image/category1.png"
+    ]
+  },
+  {
+    "name": "Combo Vở + Bút",
+    "price": 21000,
+    "image": "../assets/image/category1.3.png",
+    "category": "Combo",
+    "id": "13",
+    "desc": "Combo tiết kiệm bao gồm 1 Vở CodeWear và 1 Bút CodeWear...",
+    "info": "- <b>Bao gồm:</b> 1 Vở B5 + 1 Bút CodeWear...",
+    "gallery": [
+      "../assets/image/category1.3.png",
+      "../assets/image/category1.png",
+      "../assets/image/category1.2.png"
+    ]
+  },
+  {
+    "name": "Laptop Sticker Lớn",
+    "price": 15000,
+    "image": "../assets/image/stiker1.3.png",
+    "category": "Sticker",
+    "id": "14",
+    "desc": "Sticker kích thước lớn, thích hợp dán trang trí mặt lưng laptop...",
+    "info": "- <b>Xuất xứ:</b> Việt Nam<br>- <b>Kích thước:</b> 10cm x 10cm...",
+    "gallery": [
+      "../assets/image/stiker1.3.png",
+      "../assets/image/sticker1.2.png"
+    ]
+  },
+  {
+    "name": "Túi Tote F-Code (Đen)",
+    "price": 120000,
+    "image": "../assets/image/tote2.png",
+    "category": "Tote Bag",
+    "id": "15",
+    "desc": "Mẫu túi tote F-Code phiên bản màu đen gây ấn tượng...",
+    "info": "- <b>Xuất xứ:</b> Việt Nam<br>- <b>Chất liệu:</b> Vải bố đen...",
+    "gallery": [
+      "../assets/image/tote2.png",
+      "../assets/image/tote2.2.png",
+      "../assets/image/tote2.3.png"
+    ]
+  }
+]
